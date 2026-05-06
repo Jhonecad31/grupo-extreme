@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image"
+import logo from "@/icon/logos/Grupo extreme-02.svg"
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +19,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "Inicio", href: "/" },
-    { name: "Aventuras", href: "/aventuras" },
+    { name: "Proyectos", href: "/proyectos" },
     { name: "Nosotros", href: "/nosotros" },
     { name: "Contacto", href: "/contacto" },
   ];
@@ -29,14 +31,20 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2 group">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm group-hover:scale-110 transition-transform duration-300">
-            <span className="text-white font-display font-extrabold text-xl">X</span>
+        {/* Logo Section */}
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative w-20 h-15 transition-transform duration-300 group-hover:scale-110">
+            <Image 
+              src={logo} 
+              alt="Grupo Extreme Logo" 
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-          <span className={`text-2xl font-display font-extrabold tracking-tighter ${isScrolled ? "text-dark" : "text-white"}`}>
-            EXTREME<span className={isScrolled ? "text-primary" : "text-white"}>.</span>
-          </span>
+          {/* <span className={`text-2xl font-display font-extrabold tracking-tighter ${isScrolled ? "text-dark" : "text-white"}`}>
+            EXTREME<span className={isScrolled ? "text-primary" : "text-white"}></span>
+          </span> */}
         </Link>
 
         {/* Desktop Nav */}

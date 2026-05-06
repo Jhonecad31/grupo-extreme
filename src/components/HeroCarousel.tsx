@@ -12,7 +12,7 @@ const slides = [
   {
     title: "EXPLORA LO INEXPLORADO",
     subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
-    image: "/images/project_1.png",
+    image: "/images/project_1.jpg",
   },
 ];
 
