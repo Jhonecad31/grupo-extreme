@@ -3,7 +3,8 @@ import Footer from "@/components/shared/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
 import ProjectCard from "@/components/ProjectCard";
-import Adventures from "@/components/Adventures"
+import Adventures from "@/components/Adventures";
+import Link from "next/link";
 
 export default function Home() {
   const featuredAdventures = [
@@ -120,14 +121,13 @@ export default function Home() {
             ¿LISTO PARA TU <span className="border-b-4 border-white">PRÓXIMA AVENTURA?</span>
           </h2>
           <p className="text-white/60 text-xl mb-16 max-w-2xl mx-auto">
-            Más información
+            Hablemos sobre tu próxima gran experiencia. Nuestro equipo de expertos está listo para diseñar una aventura a tu medida.
           </p>
-          <button className="bg-white text-dark hover:bg-primary hover:text-white px-12 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all duration-500 scale-100 hover:scale-105">
+          <Link href="/contact" className="inline-block bg-white text-dark hover:bg-primary hover:text-white px-12 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all duration-500 scale-100 hover:scale-105">
             Contáctanos
-          </button>
+          </Link>
         </div>
       </section>
-
       <Footer />
     </main>
   );

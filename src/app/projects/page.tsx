@@ -22,8 +22,10 @@ export default function ProyectosPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project) => (
-              <Link
-                href={`/projects/info-projects?id=${project.id}`}
+              <a
+                href="https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+                target="_blank"
+                rel="noopener noreferrer"
                 key={project.id}
                 className="w-full h-full block group/link"
               >
@@ -78,7 +80,7 @@ export default function ProyectosPage() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
