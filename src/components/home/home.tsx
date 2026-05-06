@@ -52,11 +52,11 @@ export default async function Home(props: {
             <StatsGrid stats={dict.home.stats} />
  
             <section className="py-32 container mx-auto px-6">
-                <Adventures dict={dict.home.projects_section} />
+                <Adventures dict={dict.home.projects_section} projects={dict.projects_data} />
             </section>
  
             <section className="container mx-auto px-6 pb-12">
-                <UpcomingBrands dict={dict.projects.upcoming_brands} />
+                <UpcomingBrands dict={dict.projects.upcoming_brands} content={dict.projects.upcoming_content} />
             </section>
 
             <ExtremePartners dict={dict.home.extreme_partners} />

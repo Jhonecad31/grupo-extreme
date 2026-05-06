@@ -251,6 +251,12 @@
       "title": "Nuevas Experiencias",
       "description": "Estamos expandiendo nuestros horizontes para llevar la aventura a nuevos límites.",
       "brands_title": "EN DESARROLLO"
+    },
+    "upcoming_content": {
+      "mex": "Mex on the beach",
+      "image-mex": "/icon/logos/logo-mex-to-beach.svg",
+      "selva": "El sabor de la selva",
+      "image-selva": "/icon/logos/logo-el-sabor-de-la-selva.svg"
     }
   },
   "projects_data": [
@@ -258,7 +264,13 @@
       "id": "extreme_adventuring",
       "name": "Extreme Adventuring",
       "description": "Una experiencia inolvidable de pura adrenalina en la selva maya con tirolesas, circuitos ATVs profesionales y exploración de cenotes ocultos en la naturaleza vírgen.",
-      "features": ["Tirolesas Extremas", "Circuito ATV 4x4", "Cenotes Vírgenes", "Comida Regional", "Equipamiento de Seguridad Profesional"],
+      "features": [
+        "Tirolesas Extremas",
+        "Circuito ATV 4x4",
+        "Cenotes Vírgenes",
+        "Comida Regional",
+        "Equipamiento de Seguridad Profesional"
+      ],
       "image": "/GrupoExtreme-web/extreme-fondo.webp",
       "logo": "/icon/logos/logo-extreme.svg",
       "group": "unique",
@@ -268,7 +280,12 @@
       "id": "snorkeling_adventure",
       "name": "Snorkeling Adventure",
       "description": "Explora la majestuosa barrera de coral. Sumérgete y nada junto a tortugas marinas, mantarrayas y cientos de peces tropicales en su hábitat natural.",
-      "features": ["Equipo de Snorkel Completo", "Guía Certificado bilingüe", "Transporte en Lancha rápida", "Visita a 2 Arrecifes Protegidos"],
+      "features": [
+        "Equipo de Snorkel Completo",
+        "Guía Certificado bilingüe",
+        "Transporte en Lancha rápida",
+        "Visita a 2 Arrecifes Protegidos"
+      ],
       "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
       "logo": "/icon/logos/logo-snorkel.svg",
       "group": "unique",
@@ -278,7 +295,12 @@
       "id": "cenote_adventuring",
       "name": "Cenote Adventuring",
       "description": "Sumérgete en las aguas cristalinas y curativas de nuestros cenotes exclusivos. Una aventura mística, refrescante y conectada con la cultura maya.",
-      "features": ["Nado Libre Seguro", "Chaleco Salvavidas", "Zonas de Descanso Privadas", "Cenotes Abiertos y Subterráneos"],
+      "features": [
+        "Nado Libre Seguro",
+        "Chaleco Salvavidas",
+        "Zonas de Descanso Privadas",
+        "Cenotes Abiertos y Subterráneos"
+      ],
       "image": "/GrupoExtreme-web/cenote-fondo.webp",
       "logo": "/icon/logos/logo-cenote.svg",
       "group": "unique",
@@ -288,41 +310,61 @@
       "id": "beach_taco_tour",
       "name": "Beach Taco Tour",
       "description": "Un recorrido gastronómico y cultural excepcional. Degusta los mejores tacos locales con ingredientes frescos mientras disfruta de las vistas panorámicas frente al mar Caribe.",
-      "features": ["Degustación de Tacos Gourmet", "Bebidas y Mixología Incluidas", "Atardecer en la Playa", "Experto Guía Culinario Local"],
+      "features": [
+        "Degustación de Tacos Gourmet",
+        "Bebidas y Mixología Incluidas",
+        "Atardecer en la Playa",
+        "Experto Guía Culinario Local"
+      ],
       "image": "/GrupoExtreme-web/taco-fondo.webp",
       "logo": "/icon/logos/logo-taco.svg",
       "group": "unique",
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
     {
-      "id": "mystic-waters",
+      "id": "mystic_waters",
       "name": "Mystic Waters",
       "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
-      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "features": [
+        "Caballos Entrenados y Dóciles",
+        "Ruta Especializada en la Selva",
+        "Apto para Principiantes",
+        "Duración de 2 Horas Inmersivas"
+      ],
+      "image": "/GrupoExtreme-web/MistycW.webp",
       "logo": "/icon/logos/logo-mystic-waters.svg",
       "group": "full",
-      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+      "url": "https://extremeadventurecancun.com/"
     },
     {
-      "id": "beaf-and-beach",
-      "name": "Beef & Drive",
+      "id": "reef_and_drive",
+      "name": "Reef & Drive",
       "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
-      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "features": [
+        "Caballos Entrenados y Dóciles",
+        "Ruta Especializada en la Selva",
+        "Apto para Principiantes",
+        "Duración de 2 Horas Inmersivas"
+      ],
+      "image": "/GrupoExtreme-web/BeefD.webp",
       "logo": "/icon/logos/logo-beef-and-drive.svg",
       "group": "full",
-      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+      "url": "https://extremeadventurecancun.com/"
     },
     {
-      "id": "five-elements",
+      "id": "five_elements",
       "name": "5 Elements",
       "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
-      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "features": [
+        "Caballos Entrenados y Dóciles",
+        "Ruta Especializada en la Selva",
+        "Apto para Principiantes",
+        "Duración de 2 Horas Inmersivas"
+      ],
+      "image": "/GrupoExtreme-web/5Elements.webp",
       "logo": "/icon/logos/logo-five-elements.svg",
       "group": "full",
-      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+      "url": "https://extremeadventurecancun.com/"
     }
   ]
 }

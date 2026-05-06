@@ -1,10 +1,14 @@
 "use client";
 import Image from "next/image";
-import { upcomingBrands } from "@/data/projects";
 
-export default function UpcomingBrands({ dict }: { dict: any }) {
+export default function UpcomingBrands({ dict, content }: { dict: any, content: any }) {
 
-  if (!upcomingBrands || upcomingBrands.length === 0) return null;
+  if (!content) return null;
+
+  const upcomingBrandsList = [
+    { name: content.mex, logo: content['image-mex'] },
+    { name: content.selva, logo: content['image-selva'] }
+  ];
 
   return (
     <div className="py-24 border-t border-gray-100">
@@ -22,7 +26,7 @@ export default function UpcomingBrands({ dict }: { dict: any }) {
         </div>
 
         <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
-          {upcomingBrands.map((brand, i) => (
+          {upcomingBrandsList.map((brand, i) => (
             brand.logo && (
               <div 
                 key={i} 

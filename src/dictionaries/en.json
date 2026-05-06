@@ -251,6 +251,13 @@
       "title": "New Experiences",
       "description": "We are expanding our horizons to take adventure to new limits.",
       "brands_title": "IN DEVELOPMENT"
+      
+    },
+    "upcoming_content": {
+      "mex": "Mex on the beach",
+      "image-mex": "/icon/logos/logo-mex-to-beach.svg",
+      "selva": "El sabor de la selva",
+      "image-selva": "/icon/logos/logo-sabor-de-la-selva.svg"
     }
   },
   "projects_data": [
@@ -299,7 +306,7 @@
       "name": "Mystic Waters",
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "image": "/GrupoExtreme-web/MistycW.webp",
       "logo": "/icon/logos/logo-mystic-waters.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
@@ -309,7 +316,7 @@
       "name": "Beef & Drive",
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "image": "/GrupoExtreme-web/BeefD.webp",
       "logo": "/icon/logos/logo-beef-and-drive.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
@@ -319,10 +326,11 @@
       "name": "5 Elements",
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "image": "/GrupoExtreme-web/5Elements.webp",
       "logo": "/icon/logos/logo-five-elements.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
     }
   ]
+
 }

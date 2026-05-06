@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import UpcomingBrands from "@/components/UpcomingBrands";
+import ProjectsGrid from "@/components/ProjectsGrid";
 
 import { getDictionary } from "@/lib/get-dictionary";
 
@@ -39,78 +40,12 @@ export default async function ProyectosPage(props: {
                                     </h2>
                                     <div className="h-px bg-gray-200 flex-grow" />
                                 </div>
-                                <div className="flex flex-wrap justify-center gap-8">
-                                    {filteredProjects.map((project: any) => (
-                                        <a
-                                            href={project.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            key={project.id}
-                                            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] block group/link"
-                                        >
-                                            <div className="flex flex-col group relative h-full animate-fade-in select-none transition-transform duration-300 hover:-translate-y-2">
-                                                <div
-                                                    className="absolute inset-0 bg-black duration-500"
-                                                    style={{ clipPath: "polygon(0 0, 55% 0, 100% 25%, 100% 100%, 0 100%)" }}
-                                                />
-                                                <div className="relative z-10 p-5 md:p-6 pb-8 flex flex-col h-full">
-                                                    <div className="relative aspect-square w-full mb-6 shadow-xl bg-black overflow-hidden">
-                                                        <Image
-                                                            src={project.image}
-                                                            alt={project.name}
-                                                            draggable={false}
-                                                            fill
-                                                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                                            className="object-cover h-full animate-fade-in select-none cursor-pointer transition-all duration-700 group-hover:scale-110"
-                                                        />
-
-                                                        {project.logo && (
-                                                            <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none z-10">
-                                                                <Image
-                                                                    src={project.logo}
-                                                                    alt={`${project.name} logo`}
-                                                                    draggable={false}
-                                                                    width={300}
-                                                                    height={200}
-                                                                    className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:opacity-70"
-                                                                />
-                                                            </div>
-                                                        )}
-
-                                                        {project.status && (
-                                                            <div className="absolute inset-0 flex items-center justify-center p-4 pointer-events-none z-10">
-                                                                <span className="text-white text-2xl md:text-3xl font-bold tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-center">
-                                                                    {project.status}
-                                                                </span>
-                                                            </div>
-                                                        )}
-                                                    </div>
-
-                                                    <div className="text-center mt-auto space-y-3">
-                                                        <h3 className="text-white text-2xl font-bold tracking-tight">
-                                                            {project.name}
-                                                        </h3>
-                                                        {project.description && (
-                                                            <p className="text-white/70 text-sm font-light leading-relaxed line-clamp-3 px-2">
-                                                                {project.description}
-                                                            </p>
-                                                        )}
-                                                        <div className="pt-2">
-                                                            <span className="text-white font-bold text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                                {dict.projects.view_details}
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    ))}
-                                </div>
+                                <ProjectsGrid projects={filteredProjects} dict={dict} />
                             </div>
                         );
                     })}
                     <div className="mt-32">
-                        <UpcomingBrands dict={dict.projects.upcoming_brands} />
+                        <UpcomingBrands dict={dict.projects.upcoming_brands} content={dict.projects.upcoming_content} />
                     </div>
                 </div>
             </div>

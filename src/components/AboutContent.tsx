@@ -72,10 +72,9 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
                   whileInView={{ opacity: 1, x: 0, rotate: 0 }}
                   transition={{ delay: i * 0.2, duration: 0.8, type: "spring", stiffness: 50 }}
                   whileHover={{ scale: 1.05, x: -10 }}
-                  className={`relative p-8 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center gap-6 max-w-md ${i === 1 ? 'lg:translate-x-12' : i === 2 ? 'lg:translate-x-6' : ''
-                    }`}
+                  className="relative p-5 md:p-8 rounded-xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center gap-4 md:gap-6 max-w-md"
                 >
-                  <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-2xl p-2">
+                  <div className="w-14 h-14 md:w-20 md:h-20 bg-white rounded-xl flex items-center justify-center shrink-0 shadow-2xl p-1.5 md:p-2">
                     <div className="relative w-full h-full">
                       <Image
                         src={
@@ -90,10 +89,10 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl leading-tight mb-2">
+                    <h3 className="text-white font-bold text-lg md:text-xl leading-tight mb-1 md:mb-2">
                       {award.title}
                     </h3>
-                    <p className="text-white/60 text-sm leading-relaxed">
+                    <p className="text-white/60 text-xs md:text-sm leading-relaxed">
                       {award.description}
                     </p>
                   </div>
