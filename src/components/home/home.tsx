@@ -3,7 +3,6 @@ import StatsGrid from "@/components/StatsGrid";
 import Adventures from "@/components/sections/Adventures";
 import Mentions from "@/components/sections/Mentions";
 import UpcomingBrands from "@/components/UpcomingBrands";
-
 import { getDictionary } from "@/lib/get-dictionary";
 
 export default async function Home(props: {

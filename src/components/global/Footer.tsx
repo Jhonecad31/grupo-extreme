@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Footer({ dict, lang = "es" }: { dict: any; lang?: string }) {
+export default function Footer({ dict, lang = "en" }: { dict: any; lang?: string }) {
 
   return (
     <footer className="bg-dark text-white pt-24 pb-12">
