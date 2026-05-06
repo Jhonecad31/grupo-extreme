@@ -127,7 +127,7 @@
     "description": "¿Listo para vivir la experiencia Extreme? Contáctanos para reservas personalizadas, eventos corporativos o cualquier duda que tengas.",
     "info": {
       "office_title": "Oficina Central",
-      "office_address": "Blvd. Kukulcan Km 10.5, Zona Hotelera\n77500 Cancún, Q.R., México",
+      "office_address": "77500 Benito Juarez, Av. Huayacan plaza aura 3er piso, Cancun, Quintana Roo, Mexico",
       "contact_title": "Contacto Directo",
       "contact_details": "reservas@grupoextreme.com\n+52 (998) 123 4567",
       "hours_title": "Horario de Atención",
@@ -203,6 +203,33 @@
       "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-horse.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    },
+    {
+      "id": "mystic-waters",
+      "name": "Mystic Waters",
+      "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-mystic-waters.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    },
+    {
+      "id": "beaf-and-beach",
+      "name": "Beef & Drive",
+      "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-beef-and-drive.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    },
+    {
+      "id": "five-elements",
+      "name": "5 Elements",
+      "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-five-elements.svg",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     }
   ]

@@ -1,3 +1,4 @@
+// Aqui se maneja la info para proyectos
 export const projectsData = [
   {
     id: 1,
@@ -95,22 +96,58 @@ export const projectsData = [
     ],
     url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
   },
+  {
+    id: 7,
+    name: "Mystic Waters",
+    image: "/GrupoExtreme-web/horse-fondo.webp",
+    status: null,
+    logo: "/icon/logos/logo-mystic-waters.svg",
+    description: "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+    location: "Ruta de los cenotes",
+    features: ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+    gallery: [
+      "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80"
+    ],
+    url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+  },
+  {
+    id: 8,
+    name: "Beef & Drive",
+    image: "/GrupoExtreme-web/horse-fondo.webp",
+    status: null,
+    logo: "/icon/logos/logo-beef-and-drive.svg",
+    description: "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+    location: "Ruta de los cenotes",
+    features: ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+    gallery: [
+      "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80"
+    ],
+    url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+  },
+  {
+    id: 9,
+    name: "5 Elemenst",
+    image: "/GrupoExtreme-web/horse-fondo.webp",
+    status: null,
+    logo: "/icon/logos/logo-five-elements.svg",
+    description: "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+    location: "Ruta de los cenotes",
+    features: ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+    gallery: [
+      "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80"
+    ],
+    url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+  },
 ];
 
 // se agrega apartado para próximos proyectos
 export const upcomingBrands = [
-  {
-    name: "Mystic Waters",
-    logo: "/icon/logos/logo-mystic-waters.svg", 
-  },
-  {
-    name: "5 elements",
-    logo: "/icon/logos/logo-five-elements.svg",
-  },
-  {
-    name: "Beef & Drive",
-    logo: "/icon/logos/logo-beef-and-drive.svg",
-  },
   {
     name: "Mex on the beach",
     logo: "/icon/logos/logo-mex-to-beach.svg",

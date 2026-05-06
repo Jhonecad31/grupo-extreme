@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutContent({ lang, dict }: { lang: string; dict: any }) {
   const containerRef = useRef(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -15,9 +15,9 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
 
   return (
     <main className="min-h-screen bg-[#f9f9f9] flex flex-col">
-      
-      <section ref={containerRef} className="relative py-32 mt-20 overflow-hidden flex-grow">
-        <motion.div 
+
+      <section ref={containerRef} className="relative py-32 mt-32 overflow-hidden flex-grow">
+        <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 0.03, x: 0 }}
           className="absolute top-10 left-10 text-[15rem] md:text-[20rem] font-display font-black leading-none select-none text-dark pointer-events-none"
@@ -26,13 +26,13 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
         </motion.div>
 
         <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 relative z-10">
-          
+
           <div className="lg:col-span-5 flex flex-col justify-center">
             <motion.div style={{ y: textParallax }}>
               <span className="text-primary text-xs uppercase tracking-[0.5em] font-black mb-4 block">
                 {dict.about.editorial.subtitle}
               </span>
-              
+
               <h2 className="text-5xl md:text-7xl font-display font-black text-dark leading-[0.9] mb-10">
                 {dict.about.editorial.title}
               </h2>
@@ -59,7 +59,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
 
           <div className="lg:col-span-7 relative pt-10 md:pt-20">
             <div className="grid grid-cols-2 gap-4 h-full min-h-[500px]">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
@@ -76,7 +76,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -91,7 +91,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
                 />
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -110,7 +110,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
         </div>
       </section>
 
-      <section className="bg-white py-32 border-t border-gray-100">
+      {/* <section className="bg-white py-32 border-t border-gray-100">
         <div className="container mx-auto px-6 max-w-5xl space-y-32">
           
           <motion.div 
@@ -140,11 +140,11 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
           </motion.div>
 
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-white py-32 relative overflow-hidden flex-grow">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white -skew-x-12 transform translate-x-1/2" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <span className="text-black/50 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
@@ -169,6 +169,20 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
         </div>
       </section>
 
+      {/* Mapa Full Width de Exploración con Múltiples Puntos */}
+      <section className="w-full h-[650px] bg-gray-100 relative grayscale hover:grayscale-0 transition-all duration-1000 group overflow-hidden border-t border-gray-100">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d119253.94787948259!2d-87.112255!3d20.9168435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sExtreme%20Adventure%20Cancun!5e0!3m2!1ses!2smx!4v1715541800000!5m2!1ses!2smx"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="opacity-90 group-hover:opacity-100 transition-opacity duration-700"
+        ></iframe>
+      </section>
     </main>
   );
 }

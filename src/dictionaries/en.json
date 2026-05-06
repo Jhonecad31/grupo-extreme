@@ -127,7 +127,7 @@
     "description": "Ready to live the Extreme experience? Contact us for personalized bookings, corporate events, or any questions you may have.",
     "info": {
       "office_title": "Headquarters",
-      "office_address": "Blvd. Kukulcan Km 10.5, Hotel Zone\n77500 Cancún, Q.R., Mexico",
+      "office_address": "77500 Benito Juarez, Av. Huayacan plaza aura 3er piso, Cancun, Quintana Roo, Mexico",
       "contact_title": "Direct Contact",
       "contact_details": "reservas@grupoextreme.com\n+52 (998) 123 4567",
       "hours_title": "Opening Hours",
@@ -204,6 +204,33 @@
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-horse.svg",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    },
+    {
+      "id": "mystic_waters",
+      "name": "Mystic Waters",
+      "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
+      "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-mystic-waters.svg",
+      "url": "https://extremeadventurecancun.com/"
+    },
+    {
+      "id": "reef_and_drive",
+      "name": "Beef & Drive",
+      "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
+      "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-beef-and-drive.svg",
+      "url": "https://extremeadventurecancun.com/"
+    },
+    {
+      "id": "five_elements",
+      "name": "5 Elements",
+      "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
+      "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-five-elements.svg",
+      "url": "https://extremeadventurecancun.com/"
     }
   ]
 }

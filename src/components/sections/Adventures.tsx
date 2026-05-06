@@ -92,7 +92,7 @@ export default function Adventures({ lang = "es" }: { lang?: string }) {
             {dict.title}
           </h2>
         </div>
-        <Link href={`/${lang}/projects`} className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
+        <Link href="/projects" className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
           {dict.view_all}
           <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -131,7 +131,7 @@ export default function Adventures({ lang = "es" }: { lang?: string }) {
                         draggable={false}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover grayscale brightness-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+                        className="object-cover brightness-90 transition-all duration-700 group-hover:scale-105 group-hover:brightness-100"
                       />
 
                       {/* Logo superpuesto */}
@@ -143,7 +143,7 @@ export default function Adventures({ lang = "es" }: { lang?: string }) {
                             draggable={false}
                             width={300}
                             height={200}
-                            className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-100"
+                            className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:opacity-70"
                           />
                         </div>
                       )}

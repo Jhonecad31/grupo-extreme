@@ -25,7 +25,7 @@ export default function UpcomingBrands({ lang = "es" }: { lang?: string }) {
       
       <div className="relative z-10">
         <span className="inline-flex items-center justify-center space-x-3 text-primary font-bold tracking-[0.4em] uppercase text-xs mb-6">
-          <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_rgba(255,165,0,0.8)]" />
+          <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(255,165,0,0.4)]" />
           <span>{dict.badge}</span>
         </span>
         <h3 className="text-3xl md:text-5xl text-white font-display font-black leading-tight mb-6">
@@ -35,7 +35,7 @@ export default function UpcomingBrands({ lang = "es" }: { lang?: string }) {
           {dict.description}
         </p>
 
-        {/* Contenedor de Nuevos Logos */}
+        {/* Contenedor de Logos */}
         <div className="mt-16 pt-12 border-t border-white/10">
           <p className="text-white/40 text-sm uppercase tracking-widest mb-8 font-bold">
             {dict.brands_title}

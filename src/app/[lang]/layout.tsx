@@ -26,6 +26,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Grupo Extreme",
   description: "Ecoparque líder en aventura y ecoturismo en la Selva Maya.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export async function generateStaticParams() {

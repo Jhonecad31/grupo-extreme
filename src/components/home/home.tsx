@@ -1,11 +1,10 @@
-import Header from "@/components/global/Header";
-import Footer from "@/components/global/Footer";
 import HeroCarousel from "@/components/sections/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
 import Adventures from "@/components/sections/Adventures";
 import Mentions from "@/components/sections/Mentions";
 import UpcomingBrands from "@/components/UpcomingBrands";
 import Link from "next/link";
+import ContactContent from "@/components/ContactContent";
 
 import { getDictionary } from "@/lib/get-dictionary";
 
@@ -17,11 +16,8 @@ export default async function Home(props: {
 
     return (
         <main className="min-h-screen bg-white">
-            <Header />
-            {/* Hero Section */}
             <HeroCarousel lang={lang} />
 
-            {/* About Section */}
             <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -55,37 +51,17 @@ export default async function Home(props: {
                 </div>
             </section>
 
-            {/* Stats Section */}
             <StatsGrid lang={lang} />
 
-            {/* Adventures Section */}
             <section className="py-32 container mx-auto px-6">
                 <Adventures lang={lang} />
             </section>
 
-            {/* Upcoming Brands Section */}
             <section className="container mx-auto px-6 pb-32">
                 <UpcomingBrands lang={lang} />
             </section>
-
-            {/* Mentions / Testimonials Section */}
+            
             <Mentions lang={lang} />
-
-            {/* CTA Section */}
-            <section className="bg-dark py-32 relative overflow-hidden">
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h2 className="text-4xl md:text-7xl text-white font-display font-black mb-12 max-w-4xl mx-auto leading-none">
-                        {dict.home.cta.title}
-                    </h2>
-                    <p className="text-white/60 text-xl mb-16 max-w-2xl mx-auto">
-                        {dict.home.cta.description}
-                    </p>
-                    <Link href={`/${lang}/contact`} className="inline-block bg-white text-dark hover:bg-primary hover:text-white px-12 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all duration-500 scale-100 hover:scale-105">
-                        {dict.home.cta.button}
-                    </Link>
-                </div>
-            </section>
-            <Footer lang={lang} />
         </main>
     );
 }

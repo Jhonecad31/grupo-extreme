@@ -15,7 +15,7 @@ export default function Header() {
   const lang = (params.lang as string) || "es";
 
   // Solo el Home tiene un hero oscuro de fondo (el carrusel).
-  const isDarkHeroPage = pathname === `/${lang}` || pathname === `/${lang}/`;
+  const isDarkHeroPage = pathname === "/" || pathname === "/en" || pathname === "/en/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,29 +52,33 @@ export default function Header() {
   };
 
   const navLinks = [
-    { name: navDict.home, href: `/${lang}` },
-    { name: navDict.projects, href: `/${lang}/projects` },
-    { name: navDict.about, href: `/${lang}/about` },
-    { name: navDict.contact, href: `/${lang}/contact` },
+    { name: navDict.home, href: "/" },
+    { name: navDict.projects, href: "/projects" },
+    { name: navDict.about, href: "/about" },
+    { name: navDict.contact, href: "/contact" },
   ];
 
   const toggleLanguage = () => {
     const newLang = lang === "es" ? "en" : "es";
-    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
-    router.push(newPath);
+    
+    // Guardamos la preferencia en una cookie por 1 año
+    document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000`;
+    
+    // Recargamos la página para que el middleware aplique el cambio
+    window.location.reload();
   };
 
   const logo = "/icon/logos/logo-grupo-extreme.svg";
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${isScrolled && !isMenuOpen ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
-        } ${isScrolled ? "py-4" : "py-6"}`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled && !isMenuOpen ? "bg-white/95 backdrop-blur-md shadow-sm" : "bg-transparent"
+        } ${isScrolled ? "py-5" : "py-8"}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Section */}
-        <Link href={`/${lang}`} className="flex items-center space-x-3 group relative z-[70]">
-          <div className="relative w-20 h-15 transition-transform duration-300 group-hover:scale-110">
+        <Link href="/" className="flex items-center space-x-3 group relative z-[70]">
+          <div className="relative w-28 h-12 md:w-32 md:h-14 transition-transform duration-300 group-hover:scale-105">
             <Image
               src={logo}
               alt="Grupo Extreme Logo"
