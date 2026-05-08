@@ -14,6 +14,11 @@ const slides = [
     subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
     image: "/images/project_1.jpg",
   },
+  {
+    title: "DESAFÍA TUS SENTIDOS", 
+    subtitle: "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
+    image: "/images/buggy.jpg",
+  },
 ];
 
 export default function HeroCarousel() {
@@ -41,7 +46,7 @@ export default function HeroCarousel() {
             fill
             className="object-cover"
             priority={index === 0}
-            sizes="100vw"
+            sizes="80vw"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>

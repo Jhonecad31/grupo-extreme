@@ -3,24 +3,36 @@ import Footer from "@/components/shared/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
 import ProjectCard from "@/components/ProjectCard";
+import Adventures from "@/components/Adventures"
 
 export default function Home() {
   const featuredAdventures = [
     {
-      title: "Circuito de ATVs",
-      location: "Selva Maya",
+      title: "Extreme Adventuring",
+      location: "Ruta de los cenotes",
       image: "/images/hero_bg.jpg",
     },
     {
-      title: "Torres de Tirolina",
-      location: "Dos Niveles",
+      title: "Snorkel Adventure",
+      location: "Perto Morelos",
       image: "/images/project_1.jpg",
     },
     {
-      title: "Cenotes Abiertos",
-      location: "Aguas Cristalinas",
+      title: "Beach Taco Tour",
+      location: "Perto Morelos",
       image: "/images/project_2.jpg",
     },
+    {
+      title: "Cenote Adventuring",
+      location: "Ruta de los cenotes",
+      image: "/images/project_2.jpg"
+    },
+    {
+      title: "Horse ride",
+      location: "Ruta de los cenotes",
+      image: "/images/project_3.jpg"
+
+    }
   ];
 
   return (
@@ -84,7 +96,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block animate-fade-in">
-              Nuestras Experiencias
+              Nuestros proyectos
             </span>
             <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up">
               LA EMOCIÓN QUE <span className="text-primary">BUSCAS.</span>
@@ -97,12 +109,7 @@ export default function Home() {
             </svg>
           </button>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {featuredAdventures.map((adventure, index) => (
-            <ProjectCard key={index} {...adventure} />
-          ))}
-        </div>
+       <Adventures/>
       </section>
 
       {/* CTA Section */}

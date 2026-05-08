@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image"
-import logo from "@/icon/logos/Grupo extreme-02.svg"
+import logo from "@/icon/logo/Grupo extreme-02.svg"
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +21,7 @@ export default function Header() {
   const navLinks = [
     { name: "Inicio", href: "/" },
     { name: "Proyectos", href: "/proyects" },
-    { name: "Nosotros", href: "/nosotros" },
+    { name: "Nosotros", href: "/about" },
     { name: "Contacto", href: "/contact" },
   ];
 
