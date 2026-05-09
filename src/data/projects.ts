@@ -12,7 +12,8 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80"
-    ]
+    ],
+    url: "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
   },
   {
     id: 2,
@@ -27,7 +28,8 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80"
-    ]
+    ],
+    url: "https://snorkelingadventure.com/snorkel-adventuring-details/"
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80"
-    ]
+    ],
+    url: "https://extremeadventurecancun.com/cenote-adventuring/"
   },
   {
     id: 4,
@@ -57,7 +60,8 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80"
-    ]
+    ],
+    url: "https://extremeadventurecancun.com/beach-taco-tour/"
   },
   {
     id: 5,
@@ -72,6 +76,7 @@ export const projectsData = [
       "https://images.unsplash.com/photo-1596328608882-7227d8259508?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1533240332313-0cb497471483?auto=format&fit=crop&q=80",
       "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80"
-    ]
+    ],
+    url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
   },
 ];

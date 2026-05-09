@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
-<<<<<<< HEAD
   images: {
     remotePatterns: [
       {
@@ -14,8 +13,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-=======
->>>>>>> 77866f4 (feat:componentes y base del proyecto)
 };
 
 export default nextConfig;

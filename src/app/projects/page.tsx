@@ -23,7 +23,7 @@ export default function ProyectosPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project) => (
               <a
-                href="https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+                href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={project.id}
