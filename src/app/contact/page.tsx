@@ -18,7 +18,7 @@ export default function ContactoPage() {
                 TU PRÓXIMA <br/><span className="text-primary italic">AVENTURA</span> COMIENZA AQUÍ
               </h1>
               <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-lg">
-                ¿Listo para vivir la experiencia Extreme? Contáctanos para reservas personalizadas, eventos corporativos o cualquier duda que tengas.
+                ¿Listo para vivir la experiencia Extreme? Contáctanos para reservas personalizadas,eventos corporativos o cualquier duda que tengas.
               </p>
 
               <div className="space-y-8">
