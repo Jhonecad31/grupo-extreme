@@ -64,12 +64,9 @@ export default function HeroCarousel() {
         <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 animate-fade-in delay-200">
           {slides[current].subtitle}
         </p>
-        <div className="flex space-x-6 animate-fade-in delay-500">
-          <button className="bg-white hover:bg-white/90 text-dark px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
+        <div className="flex justify-center animate-fade-in delay-500">
+          <button className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
             Explorar Aventuras
-          </button>
-          <button className="border border-white/30 hover:border-white text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
-            Reservar Ahora
           </button>
         </div>
       </div>
