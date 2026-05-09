@@ -2,13 +2,19 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+<<<<<<< HEAD
 import Image from "next/image"
 import logo from "@/icon/logo/Grupo extreme-02.svg"
+=======
+>>>>>>> 77866f4 (feat:componentes y base del proyecto)
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+<<<<<<< HEAD
   const [language, setLanguage] = useState<"ES" | "EN">("ES");
+=======
+>>>>>>> 77866f4 (feat:componentes y base del proyecto)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +26,15 @@ export default function Header() {
 
   const navLinks = [
     { name: "Inicio", href: "/" },
+<<<<<<< HEAD
     { name: "Proyectos", href: "/projects" },
     { name: "Nosotros", href: "/about" },
     { name: "Contacto", href: "/contact" },
+=======
+    { name: "Aventuras", href: "/aventuras" },
+    { name: "Nosotros", href: "/nosotros" },
+    { name: "Contacto", href: "/contacto" },
+>>>>>>> 77866f4 (feat:componentes y base del proyecto)
   ];
 
   return (
@@ -32,6 +44,7 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
+<<<<<<< HEAD
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="relative w-20 h-15 transition-transform duration-300 group-hover:scale-110">
@@ -43,6 +56,16 @@ export default function Header() {
               priority
             />
           </div>
+=======
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2 group">
+          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm group-hover:scale-110 transition-transform duration-300">
+            <span className="text-white font-display font-extrabold text-xl">X</span>
+          </div>
+          <span className={`text-2xl font-display font-extrabold tracking-tighter ${isScrolled ? "text-dark" : "text-white"}`}>
+            EXTREME<span className={isScrolled ? "text-primary" : "text-white"}>.</span>
+          </span>
+>>>>>>> 77866f4 (feat:componentes y base del proyecto)
         </Link>
 
         {/* Desktop Nav */}
@@ -58,6 +81,7 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+<<<<<<< HEAD
           <button
             onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
             className={`px-4 py-2 rounded-full text-sm font-bold tracking-widest transition-all duration-300 flex items-center space-x-2 border-2 ${
@@ -71,6 +95,18 @@ export default function Header() {
             </svg>
             <span>{language}</span>
           </button>
+=======
+          <Link
+            href="/contacto"
+            className={`px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-widest transition-all duration-300 ${
+              isScrolled
+                ? "bg-dark text-white hover:bg-primary"
+                : "bg-white text-dark hover:bg-primary hover:text-white"
+            }`}
+          >
+            Reservar
+          </Link>
+>>>>>>> 77866f4 (feat:componentes y base del proyecto)
         </nav>
 
         {/* Mobile Toggle */}
