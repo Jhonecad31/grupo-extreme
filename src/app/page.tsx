@@ -120,10 +120,10 @@ export default function Home() {
             ¿LISTO PARA TU <span className="border-b-4 border-white">PRÓXIMA AVENTURA?</span>
           </h2>
           <p className="text-white/60 text-xl mb-16 max-w-2xl mx-auto">
-            Reserva hoy tu lugar en el ecoparque más emocionante de Cancún.
+            Más información
           </p>
           <button className="bg-white text-dark hover:bg-primary hover:text-white px-12 py-5 rounded-sm font-black uppercase tracking-[0.2em] transition-all duration-500 scale-100 hover:scale-105">
-            Reservar Ahora
+            Contáctanos
           </button>
         </div>
       </section>
