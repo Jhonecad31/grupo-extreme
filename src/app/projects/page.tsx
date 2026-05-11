@@ -36,7 +36,6 @@ export default function ProyectosPage() {
                     className="absolute inset-0 bg-black duration-500"
                     style={{ clipPath: "polygon(0 0, 55% 0, 100% 25%, 100% 100%, 0 100%)" }}
                   />
-
                   {/* Contenido (Imagen y Textos) superpuesto al fondo */}
                   <div className="relative z-10 p-5 md:p-6 pb-8 flex flex-col h-full">
                     {/* Contenedor de la imagen sin overflow-hidden en el padre para que la esquina sobresalga del fondo */}

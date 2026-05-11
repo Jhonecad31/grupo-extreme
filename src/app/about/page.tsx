@@ -5,8 +5,6 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import Image from "next/image";
 
-const MotionImage = motion.create(Image);
-
 export default function AboutPage() {
   const containerRef = useRef(null);
   
@@ -15,7 +13,6 @@ export default function AboutPage() {
     offset: ["start end", "end start"],
   });
 
-  const imgParallax = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
   const textParallax = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
@@ -24,11 +21,11 @@ export default function AboutPage() {
       
       {/* Editorial Section */}
       <section ref={containerRef} className="relative py-32 mt-20 overflow-hidden flex-grow">
-        {/* 1. NÚMERO DE SECCIÓN DECORATIVO (Estilo Revista) */}
+        {/* 1. NÚMERO DE SECCIÓN DECORATIVO */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 0.03, x: 0 }}
-          className="absolute top-10 left-10 text-[15rem] md:text-[20rem] font-display font-black leading-none select-none text-dark"
+          className="absolute top-10 left-10 text-[15rem] md:text-[20rem] font-display font-black leading-none select-none text-dark pointer-events-none"
         >
           01
         </motion.div>
@@ -46,7 +43,7 @@ export default function AboutPage() {
                 18 AÑOS DE <br /> <span className="text-primary italic">LEGADO.</span>
               </h2>
 
-              {/* MANIFIESTO (Texto principal) */}
+              {/* MANIFIESTO */}
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed border-l-2 border-primary/20 pl-8 ml-2">
                 <p className="font-medium text-dark/80">
                   <strong className="text-dark">Extreme Adventuring Cancun</strong> comenzó como un pequeño proyecto para apoyar a la comunidad local tras los cierres del puerto. Hoy, somos el parque ecológico de aventuras líder en la icónica Ruta de los Cenotes en Puerto Morelos.
@@ -56,7 +53,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* STATS / DATOS DE INTERÉS (Grid de Información Extra) */}
+              {/* STATS */}
               <div className="grid grid-cols-2 gap-8 mt-16 border-t border-gray-200 pt-10">
                 <div>
                   <h4 className="text-4xl font-display font-black text-dark">+18</h4>
@@ -70,56 +67,64 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
-          {/* LADO DERECHO: COMPOSICIÓN VISUAL ASIMÉTRICA (7 columnas) */}
+          {/* LADO DERECHO: COMPOSICIÓN BENTO BOX (7 columnas) */}
           <div className="lg:col-span-7 relative pt-10 md:pt-20">
-            
-            {/* Imagen Principal con Revelado Vertical */}
-            <motion.div 
-              initial={{ clipPath: "inset(0 0 100% 0)" }}
-              whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-              transition={{ duration: 1.4, ease: [0.45, 0, 0.55, 1] }}
-              className="relative aspect-[3/4] md:aspect-square lg:aspect-[3/4] w-full overflow-hidden shadow-2xl rounded-sm"
-            >
-              <motion.div style={{ scale: 1.2, y: imgParallax }} className="absolute inset-0 w-full h-full">
+            <div className="grid grid-cols-2 gap-4 h-full min-h-[500px]">
+              {/* Imagen Principal (Ocupa 2 filas o la mayor parte) */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="col-span-2 md:col-span-1 md:row-span-2 relative aspect-[4/3] md:aspect-auto md:h-full rounded-xl overflow-hidden shadow-2xl group border-[6px] border-white bg-[#1a1a1a]"
+              >
                 <Image
                   src="/GrupoExtreme-web/cenote-fondo.webp"
                   alt="Exploración en cenote"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </motion.div>
+
+              {/* Imagen Secundaria Arriba */}
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="col-span-1 relative aspect-square rounded-xl overflow-hidden shadow-2xl group border border-white/10 bg-[#1a1a1a]"
+              >
+                <Image
+                  src="/GrupoExtreme-web/extreme-fondo.webp"
+                  alt="Aventura ATV"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
                 />
               </motion.div>
-              <div className="absolute inset-0 bg-dark/10" />
-            </motion.div>
 
-            {/* Segunda Imagen (Imagen de Detalle / Contexto) */}
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 1 }}
-              className="absolute -right-6 md:-right-12 -bottom-10 md:-bottom-16 w-2/3 md:w-1/2 aspect-square hidden sm:block border-[8px] md:border-[12px] border-[#f9f9f9] overflow-hidden shadow-2xl rounded-sm z-20"
-            >
-              <Image 
-                src="/GrupoExtreme-web/extreme-fondo.webp" 
-                alt="Aventura en la selva"
-                fill
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-              />
-            </motion.div>
-
-            {/* Etiqueta Flotante (Metadata del Proyecto) */}
-            <div className="absolute top-10 right-0 p-6 bg-primary text-white translate-x-1/4 -translate-y-1/4 shadow-lg z-30 hidden md:block">
-              <p className="text-[10px] tracking-[0.3em] font-black uppercase rotate-90 origin-left mt-8">
-                Est. 2008
-              </p>
+              {/* Imagen Terciaria Abajo */}
+              <motion.div 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="col-span-1 relative aspect-square rounded-xl overflow-hidden shadow-2xl group border-[6px] border-white bg-[#1a1a1a]"
+              >
+                <Image
+                  src="/GrupoExtreme-web/snorkel-fondo-2.webp"
+                  alt="Snorkel"
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover grayscale transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0"
+                />
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Misión y Visión Section (Estilo Miraro) */}
+      {/* Misión y Visión Section */}
       <section className="bg-white py-32 border-t border-gray-100">
         <div className="container mx-auto px-6 max-w-5xl space-y-32">
           
@@ -153,8 +158,8 @@ export default function AboutPage() {
       </section>
 
       {/* Filosofía Section */}
-      <section className="bg-dark py-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/2" />
+      <section className="bg-dark py-32 relative overflow-hidden flex-grow">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">

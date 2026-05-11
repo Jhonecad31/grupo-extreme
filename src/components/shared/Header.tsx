@@ -11,7 +11,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState<"ES" | "EN">("ES");
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  // Solo el Home tiene un hero oscuro de fondo (el carrusel).
+  const isDarkHeroPage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +68,7 @@ export default function Header() {
               key={link.name}
               href={link.href}
               className={`text-sm font-semibold tracking-wide uppercase transition-colors duration-300 ${
-                isScrolled || !isHomePage ? "text-dark hover:text-primary" : "text-white/80 hover:text-white"
+                isScrolled || !isDarkHeroPage ? "text-dark hover:text-primary" : "text-white/80 hover:text-white"
               }`}
             >
               {link.name}
@@ -76,7 +77,7 @@ export default function Header() {
           <button
             onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
             className={`px-4 py-2 rounded-full text-sm font-bold tracking-widest transition-all duration-300 flex items-center space-x-2 border-2 ${
-              isScrolled || !isHomePage
+              isScrolled || !isDarkHeroPage
                 ? "border-dark text-dark hover:bg-dark hover:text-white"
                 : "border-white/50 text-white hover:border-white hover:bg-white/10"
             }`}
@@ -94,9 +95,9 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
         >
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-white" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"}`}></span>
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"}`}></span>
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-white" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"} ${!isMenuOpen && "w-4 self-end"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-white" : isScrolled || !isDarkHeroPage ? "bg-dark" : "bg-white"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : isScrolled || !isDarkHeroPage ? "bg-dark" : "bg-white"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-white" : isScrolled || !isDarkHeroPage ? "bg-dark" : "bg-white"} ${!isMenuOpen && "w-4 self-end"}`}></span>
         </button>
       </div>
 
