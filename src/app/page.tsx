@@ -23,7 +23,7 @@ export default function Home() {
                 Nuestra Historia
               </span>
               <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight mb-8">
-                MÁS QUE AVENTURA, UN <span className="text-primary">LEGADO EN LA SELVA.</span>
+                MÁS QUE AVENTURA, UN <span className="font-black">LEGADO EN LA SELVA.</span>
               </h2>
               <div className="space-y-6 text-dark/70 text-lg leading-relaxed">
                 <p>
@@ -78,7 +78,6 @@ export default function Home() {
       
       {/* CTA Section */}
       <section className="bg-dark py-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/2" />
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-7xl text-white font-display font-black mb-12 max-w-4xl mx-auto leading-none">
             ¿LISTO PARA TU <span className="border-b-4 border-white">PRÓXIMA AVENTURA?</span>

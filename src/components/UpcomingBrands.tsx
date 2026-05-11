@@ -17,7 +17,7 @@ export default function UpcomingBrands() {
           <span>En Desarrollo</span>
         </span>
         <h3 className="text-3xl md:text-5xl text-white font-display font-black leading-tight mb-6">
-          NUEVAS EXPERIENCIAS <br /> <span className="text-primary italic border-b-2 border-primary">MUY PRONTO</span>
+          NUEVAS EXPERIENCIAS <br />
         </h3>
         <p className="text-white/60 text-lg max-w-2xl mx-auto font-light leading-relaxed">
           Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.

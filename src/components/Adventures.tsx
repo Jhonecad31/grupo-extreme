@@ -77,7 +77,7 @@ export default function Adventures() {
             Nuestros proyectos
           </span>
           <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up">
-            LA EMOCIÓN QUE <span className="text-primary">BUSCAS.</span>
+            LA EMOCIÓN QUE <span className="font-black">BUSCAS.</span>
           </h2>
         </div>
         <Link href="/projects" className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
