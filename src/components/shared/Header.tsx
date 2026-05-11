@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
         isScrolled && !isMenuOpen ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
       } ${isScrolled ? "py-4" : "py-6"}`}
     >
@@ -99,7 +99,7 @@ export default function Header() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-dark z-[60] transition-all duration-500 ease-in-out flex flex-col justify-center items-center ${
+        className={`fixed inset-0 bg-dark z-[60] transition-[opacity,visibility] duration-500 ease-in-out flex flex-col justify-center items-center ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
@@ -108,7 +108,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-white text-3xl md:text-4xl font-display font-black uppercase tracking-widest hover:text-primary transition-all duration-500 transform ${
+              className={`text-white text-3xl md:text-4xl font-display font-black uppercase tracking-widest hover:text-primary transition-[opacity,transform,color] duration-500 transform will-change-transform ${
                 isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${i * 100}ms` }}
@@ -119,7 +119,9 @@ export default function Header() {
           ))}
           
           <div 
-            className={`pt-10 transition-all duration-500 transform ${isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            className={`pt-10 transition-[opacity,transform] duration-500 transform will-change-transform ${
+              isMenuOpen ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
             style={{ transitionDelay: "400ms" }}
           >
             <button

@@ -2,6 +2,7 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
+import Image from "next/image";
 
 export default function ProyectosPage() {
   return (
@@ -29,10 +30,10 @@ export default function ProyectosPage() {
                 key={project.id}
                 className="w-full h-full block group/link"
               >
-                <div className="flex flex-col group relative h-full animate-fade-in select-none cursor-pointer transition-transform duration-300 hover:-translate-y-2">
+                <div className="flex flex-col group relative h-full animate-fade-in select-none transition-transform duration-300 hover:-translate-y-2">
                   {/* Fondo oscuro con el corte diagonal en la esquina superior derecha */}
                   <div 
-                    className="absolute inset-0 bg-[#1a1a1a] transition-colors duration-500 group-hover:bg-primary"
+                    className="absolute inset-0 bg-[#1a1a1a] duration-500"
                     style={{ clipPath: "polygon(0 0, 55% 0, 100% 25%, 100% 100%, 0 100%)" }}
                   />
                   
@@ -41,21 +42,25 @@ export default function ProyectosPage() {
                     {/* Contenedor de la imagen sin overflow-hidden en el padre para que la esquina sobresalga del fondo */}
                     <div className="relative aspect-square w-full mb-6 shadow-xl bg-black">
                       {/* Imagen de fondo */}
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.name}
                         draggable={false}
-                        className="w-full h-full object-cover grayscale brightness-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover  h-full animate-fade-in select-none cursor-pointer grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
                       />
                       
                       {/* Logo superpuesto */}
                       {project.logo && (
                         <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none z-10">
-                          <img 
+                          <Image 
                             src={project.logo} 
                             alt={`${project.name} logo`} 
                             draggable={false}
-                            className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl grayscale brightness-90 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-100"
+                            width={300}
+                            height={200}
+                            className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl  transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-100"
                           />
                         </div>
                       )}
@@ -70,13 +75,20 @@ export default function ProyectosPage() {
                       )}
                     </div>
 
-                    <div className="text-center mt-auto space-y-2">
-                      <h3 className="text-white text-2xl font-bold tracking-tight group-hover:text-white transition-colors duration-300">
+                    <div className="text-center mt-auto space-y-3">
+                      <h3 className="text-white text-2xl font-bold tracking-tight">
                         {project.name}
                       </h3>
-                      <span className="text-primary font-bold text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        Ver Detalles →
-                      </span>
+                      {project.description && (
+                        <p className="text-white/70 text-sm font-light leading-relaxed line-clamp-3 px-2">
+                          {project.description}
+                        </p>
+                      )}
+                      <div className="pt-2">
+                        <span className="text-primary font-bold text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          Ver Detalles →
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

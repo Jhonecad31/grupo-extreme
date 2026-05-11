@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
     root: __dirname,
   },
   images: {
+    loader: "custom",
+    loaderFile: "./src/lib/imagekitLoader.ts",
     remotePatterns: [
       {
         protocol: "https",

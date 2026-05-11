@@ -3,42 +3,43 @@
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 const tours = [
   {
     id: 1,
     name: "Extreme Adventuring",
-    image: "/images/img-proyects/extreme-fondo.jpg",
+    image: "/GrupoExtreme-web/extreme-fondo.webp",
     status: null,
-    logo: "/icon/logos/extreme-eco.svg",
+    logo: "/icon/logos/logo-extreme.svg",
   },
   {
     id: 2,
     name: "Snorkeling Adventuring",
-    image: "/images/img-proyects/snorkel-nado.jpg",
+    image: "/GrupoExtreme-web/snorkel-fondo-2.webp",
     status: null,
-    logo: "/icon/logos/logo-snorkel.png",
+    logo: "/icon/logos/logo-snorkel.svg",
   },
   {
     id: 3,
     name: "Cenote Adventuring",
-    image: "/images/img-proyects/cenote-fondo.jpg",
+    image: "/GrupoExtreme-web/cenote-fondo.webp",
     status: null,
-    logo: "/icon/logos/cenote-adventuring.png",
+    logo: "/icon/logos/logo-cenote.svg",
   },
   {
     id: 4,
     name: "Beach Taco Tour",
-    image: "/images/img-proyects/taco-fondo.webp",
+    image: "/GrupoExtreme-web/taco-fondo.webp",
     status: null,
-    logo: "/icon/logos/beach-taco-tour.png",
+    logo: "/icon/logos/logo-taco.svg",
   },
   {
     id: 5,
     name: "Horse Ride",
-    image: "/images/img-proyects/horse-fondo.webp",
+    image: "/GrupoExtreme-web/horse-fondo.webp",
     status: null,
-    logo: "/icon/logos/horse.svg",
+    logo: "/icon/logos/logo-horse.svg",
   },
 ];
 
@@ -96,20 +97,24 @@ export default function Adventures() {
                     {/* Contenedor de la imagen sin overflow-hidden en el padre para que la esquina sobresalga del fondo */}
                     <div className="relative aspect-square w-full mb-6 shadow-xl bg-black">
                       {/* Imagen de fondo */}
-                      <img
+                      <Image
                         src={tour.image}
                         alt={tour.name}
                         draggable={false}
-                        className="w-full h-full object-cover grayscale brightness-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover grayscale brightness-90 transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
                       />
                       
                       {/* Logo superpuesto */}
                       {tour.logo && (
                         <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none z-10">
-                          <img 
+                          <Image 
                             src={tour.logo} 
                             alt={`${tour.name} logo`} 
                             draggable={false}
+                            width={300}
+                            height={200}
                             className="w-3/4 h-auto max-h-[60%] object-contain drop-shadow-2xl grayscale brightness-90 transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-100"
                           />
                         </div>

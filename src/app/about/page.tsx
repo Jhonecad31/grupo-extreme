@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
+import Image from "next/image";
+
+const MotionImage = motion.create(Image);
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -77,12 +80,16 @@ export default function AboutPage() {
               transition={{ duration: 1.4, ease: [0.45, 0, 0.55, 1] }}
               className="relative aspect-[3/4] md:aspect-square lg:aspect-[3/4] w-full overflow-hidden shadow-2xl rounded-sm"
             >
-              <motion.img
-                style={{ scale: 1.2, y: imgParallax }}
-                src="/images/img-proyects/cenote-fondo.jpg"
-                alt="Exploración en cenote"
-                className="w-full h-full object-cover"
-              />
+              <motion.div style={{ scale: 1.2, y: imgParallax }} className="absolute inset-0 w-full h-full">
+                <Image
+                  src="/GrupoExtreme-web/cenote-fondo.webp"
+                  alt="Exploración en cenote"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </motion.div>
               <div className="absolute inset-0 bg-dark/10" />
             </motion.div>
 
@@ -93,10 +100,12 @@ export default function AboutPage() {
               transition={{ delay: 0.6, duration: 1 }}
               className="absolute -right-6 md:-right-12 -bottom-10 md:-bottom-16 w-2/3 md:w-1/2 aspect-square hidden sm:block border-[8px] md:border-[12px] border-[#f9f9f9] overflow-hidden shadow-2xl rounded-sm z-20"
             >
-              <img 
-                src="/images/img-proyects/extreme-fondo.jpg" 
+              <Image 
+                src="/GrupoExtreme-web/extreme-fondo.webp" 
                 alt="Aventura en la selva"
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
+                fill
+                sizes="(max-width: 1024px) 50vw, 25vw"
+                className="object-cover grayscale hover:grayscale-0 transition-all duration-700" 
               />
             </motion.div>
 

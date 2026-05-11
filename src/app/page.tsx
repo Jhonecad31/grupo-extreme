@@ -2,44 +2,13 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
-import ProjectCard from "@/components/ProjectCard";
 import Adventures from "@/components/Adventures";
 import Link from "next/link";
 
 export default function Home() {
-  const featuredAdventures = [
-    {
-      title: "Extreme Adventuring",
-      location: "Ruta de los cenotes",
-      image: "/images/hero_bg.jpg",
-    },
-    {
-      title: "Snorkel Adventure",
-      location: "Perto Morelos",
-      image: "/images/project_1.jpg",
-    },
-    {
-      title: "Beach Taco Tour",
-      location: "Perto Morelos",
-      image: "/images/project_2.jpg",
-    },
-    {
-      title: "Cenote Adventuring",
-      location: "Ruta de los cenotes",
-      image: "/images/project_2.jpg"
-    },
-    {
-      title: "Horse ride",
-      location: "Ruta de los cenotes",
-      image: "/images/project_3.jpg"
-
-    }
-  ];
-
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      
       {/* Hero Section */}
       <HeroCarousel />
 
