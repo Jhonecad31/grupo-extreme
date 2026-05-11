@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image"
 import logo from "@/icon/logo/Grupo extreme-02.svg"
 
@@ -9,6 +10,8 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [language, setLanguage] = useState<"ES" | "EN">("ES");
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +67,7 @@ export default function Header() {
               key={link.name}
               href={link.href}
               className={`text-sm font-semibold tracking-wide uppercase transition-colors duration-300 ${
-                isScrolled ? "text-dark hover:text-primary" : "text-white/80 hover:text-white"
+                isScrolled || !isHomePage ? "text-dark hover:text-primary" : "text-white/80 hover:text-white"
               }`}
             >
               {link.name}
@@ -73,7 +76,7 @@ export default function Header() {
           <button
             onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
             className={`px-4 py-2 rounded-full text-sm font-bold tracking-widest transition-all duration-300 flex items-center space-x-2 border-2 ${
-              isScrolled
+              isScrolled || !isHomePage
                 ? "border-dark text-dark hover:bg-dark hover:text-white"
                 : "border-white/50 text-white hover:border-white hover:bg-white/10"
             }`}
@@ -91,9 +94,9 @@ export default function Header() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Menu"
         >
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-white" : isScrolled ? "bg-dark" : "bg-white"}`}></span>
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : isScrolled ? "bg-dark" : "bg-white"}`}></span>
-          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-white" : isScrolled ? "bg-dark" : "bg-white"} ${!isMenuOpen && "w-4 self-end"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2 bg-white" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "opacity-0" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"}`}></span>
+          <span className={`w-6 h-0.5 transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2 bg-white" : isScrolled || !isHomePage ? "bg-dark" : "bg-white"} ${!isMenuOpen && "w-4 self-end"}`}></span>
         </button>
       </div>
 

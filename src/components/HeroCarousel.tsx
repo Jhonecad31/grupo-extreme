@@ -7,17 +7,17 @@ const slides = [
   {
     title: "AVENTURA SIN LÍMITES EN CANCÚN",
     subtitle: "Descubre la emoción de la selva maya con experiencias diseñadas para toda la familia.",
-    image: "/images/hero_bg.jpg",
+    image: "/GrupoExtreme-web/moto-hero.webp",
   },
   {
     title: "EXPLORA LO INEXPLORADO",
     subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
-    image: "/images/project_1.jpg",
+    image: "/GrupoExtreme-web/buggy-hero.webp",
   },
   {
-    title: "DESAFÍA TUS SENTIDOS", 
+    title: "DESAFÍA TUS SENTIDOS",
     subtitle: "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
-    image: "/images/buggy.jpg",
+    image: "/GrupoExtreme-web/motoext-hero.webp",
   },
 ];
 
@@ -36,9 +36,8 @@ export default function HeroCarousel() {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === current ? "opacity-100 scale-105" : "opacity-0 scale-100"
-          } transition-transform duration-[10000ms]`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100 scale-105" : "opacity-0 scale-100"
+            } transition-transform duration-[10000ms]`}
         >
           <Image
             src={slide.image}
@@ -77,9 +76,8 @@ export default function HeroCarousel() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`h-1 transition-all duration-500 ${
-              i === current ? "w-12 bg-primary" : "w-6 bg-white/30 hover:bg-white/50"
-            }`}
+            className={`h-1 transition-all duration-500 ${i === current ? "w-12 bg-primary" : "w-6 bg-white/30 hover:bg-white/50"
+              }`}
           />
         ))}
       </div>

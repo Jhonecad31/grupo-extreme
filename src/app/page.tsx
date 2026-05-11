@@ -63,25 +63,9 @@ export default function Home() {
 
       {/* Adventures Section */}
       <section className="py-32 container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl">
-            <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block animate-fade-in">
-              Nuestros proyectos
-            </span>
-            <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up">
-              LA EMOCIÓN QUE <span className="text-primary">BUSCAS.</span>
-            </h2>
-          </div>
-          <button className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
-            Ver Todas
-            <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </button>
-        </div>
-       <Adventures/>
+        <Adventures />
       </section>
-
+      
       {/* CTA Section */}
       <section className="bg-dark py-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/2" />

@@ -96,3 +96,27 @@ export const projectsData = [
     url: "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
   },
 ];
+
+// se agrega aparatado para próximos proyectos
+export const upcomingBrands = [
+  {
+    name: "Mystic Waters",
+    logo: "/icon/logos/logo-mystic-waters.svg", 
+  },
+  {
+    name: "5 elements",
+    logo: "/icon/logos/logo-five-elements.svg",
+  },
+  {
+    name: "Beef & Drive",
+    logo: "/icon/logos/logo-beef-and-drive.svg",
+  },
+  {
+    name: "Mex on the beach",
+    logo: "/icon/logos/logo-mex-to-beach.svg",
+  },
+  {
+    name: "El sabor de la selva",
+    logo: "/icon/logos/logo-sabor-de-la-selva.svg",
+  }
+];
