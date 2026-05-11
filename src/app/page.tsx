@@ -3,6 +3,8 @@ import Footer from "@/components/shared/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import StatsGrid from "@/components/StatsGrid";
 import Adventures from "@/components/Adventures";
+import Mentions from "@/components/Mentions";
+import UpcomingBrands from "@/components/UpcomingBrands";
 import Link from "next/link";
 
 export default function Home() {
@@ -65,6 +67,14 @@ export default function Home() {
       <section className="py-32 container mx-auto px-6">
         <Adventures />
       </section>
+
+      {/* Upcoming Brands Section */}
+      <section className="container mx-auto px-6 pb-32">
+        <UpcomingBrands />
+      </section>
+
+      {/* Mentions / Testimonials Section */}
+      <Mentions />
       
       {/* CTA Section */}
       <section className="bg-dark py-32 relative overflow-hidden">
