@@ -97,7 +97,7 @@ export const projectsData = [
   },
 ];
 
-// se agrega aparatado para próximos proyectos
+// se agrega apartado para próximos proyectos
 export const upcomingBrands = [
   {
     name: "Mystic Waters",

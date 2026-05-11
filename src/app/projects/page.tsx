@@ -32,11 +32,11 @@ export default function ProyectosPage() {
               >
                 <div className="flex flex-col group relative h-full animate-fade-in select-none transition-transform duration-300 hover:-translate-y-2">
                   {/* Fondo oscuro con el corte diagonal en la esquina superior derecha */}
-                  <div 
+                  <div
                     className="absolute inset-0 bg-black duration-500"
                     style={{ clipPath: "polygon(0 0, 55% 0, 100% 25%, 100% 100%, 0 100%)" }}
                   />
-                  
+
                   {/* Contenido (Imagen y Textos) superpuesto al fondo */}
                   <div className="relative z-10 p-5 md:p-6 pb-8 flex flex-col h-full">
                     {/* Contenedor de la imagen sin overflow-hidden en el padre para que la esquina sobresalga del fondo */}
@@ -50,13 +50,13 @@ export default function ProyectosPage() {
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover  h-full animate-fade-in select-none cursor-pointer grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
                       />
-                      
+
                       {/* Logo superpuesto */}
                       {project.logo && (
                         <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none z-10">
-                          <Image 
-                            src={project.logo} 
-                            alt={`${project.name} logo`} 
+                          <Image
+                            src={project.logo}
+                            alt={`${project.name} logo`}
                             draggable={false}
                             width={300}
                             height={200}
@@ -101,14 +101,14 @@ export default function ProyectosPage() {
             <div className="absolute inset-0 opacity-10 bg-[url('/GrupoExtreme-web/moto-hero.webp')] bg-cover bg-center grayscale transition-transform duration-1000 group-hover:scale-105" />
             <div className="absolute inset-0 bg-dark/80" />
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
-            
+
             <div className="relative z-10">
               <span className="inline-flex items-center justify-center space-x-3 text-primary font-bold tracking-[0.4em] uppercase text-xs mb-6">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_rgba(255,165,0,0.8)]" />
                 <span>En Desarrollo</span>
               </span>
               <h3 className="text-3xl md:text-5xl text-white font-display font-black leading-tight mb-6">
-                NUEVAS EXPERIENCIAS <br/> <span className="text-primary italic border-b-2 border-primary">MUY PRONTO</span>
+                NUEVAS EXPERIENCIAS <br /> <span className="text-primary italic border-b-2 border-primary">MUY PRONTO</span>
               </h3>
               <p className="text-white/60 text-lg max-w-2xl mx-auto font-light leading-relaxed">
                 Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.
@@ -122,12 +122,12 @@ export default function ProyectosPage() {
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                   {upcomingBrands.map((brand, i) => (
                     brand.logo && (
-                      <div key={i} className="w-32 h-24 relative flex items-center justify-center opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer group/logo">
-                        <Image 
-                          src={brand.logo} 
-                          alt={`Logo ${brand.name}`} 
-                          fill 
-                          className="object-contain" 
+                      <div key={i} className="w-32 h-24 relative flex items-center justify-center grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer group/logo">
+                        <Image
+                          src={brand.logo}
+                          alt={`Logo ${brand.name}`}
+                          fill
+                          className="object-contain"
                         />
                       </div>
                     )
