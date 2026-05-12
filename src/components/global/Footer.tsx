@@ -1,12 +1,16 @@
 import Link from "next/link";
 
-export default function Footer() {
+import { getDictionary } from "@/lib/get-dictionary";
+
+export default async function Footer({ lang = "es" }: { lang?: string }) {
+  const dict = await getDictionary(lang as "en" | "es");
+
   return (
     <footer className="bg-dark text-white pt-24 pb-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-24">
           <div className="md:col-span-4">
-            <Link href="/" className="flex items-center space-x-2 mb-8">
+            <Link href={`/${lang}`} className="flex items-center space-x-2 mb-8">
               <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-sm">
                 <span className="text-white font-display font-extrabold text-xl">X</span>
               </div>
@@ -15,8 +19,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/50 max-w-sm mb-8">
-              Ecoparque líder en aventura y ecoturismo en la Selva Maya. 
-              Comprometidos con la seguridad y la preservación de nuestro entorno natural.
+              {dict.footer.description}
             </p>
             <div className="flex space-x-4">
               {["facebook", "instagram", "linkedin", "x"].map((social) => (
@@ -29,12 +32,18 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2 md:col-start-6">
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">Navegación</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">{dict.footer.nav_title}</h4>
             <ul className="space-y-4">
-              {["Inicio", "Aventuras", "Nosotros", "Blog", "Contacto"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-white/50 hover:text-white transition-colors">
-                    {item}
+              {[
+                { name: dict.navigation.home, href: `/${lang}` },
+                { name: dict.navigation.projects, href: `/${lang}/projects` },
+                { name: dict.navigation.about, href: `/${lang}/about` },
+                { name: dict.navigation.blog, href: `/${lang}/blog` },
+                { name: dict.navigation.contact, href: `/${lang}/contact` }
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-white/50 hover:text-white transition-colors">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -42,9 +51,9 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">Legal</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">{dict.footer.legal_title}</h4>
             <ul className="space-y-4">
-              {["Términos y Condiciones", "Política de Privacidad", "Cookies"].map((item) => (
+              {dict.footer.legal_links.map((item) => (
                 <li key={item}>
                   <Link href="#" className="text-white/50 hover:text-white transition-colors">
                     {item}
@@ -55,14 +64,14 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">Newsletter</h4>
+            <h4 className="text-sm font-bold uppercase tracking-widest mb-8">{dict.footer.newsletter_title}</h4>
             <p className="text-white/50 text-sm mb-6">
-              Suscríbete para recibir ofertas exclusivas y noticias de aventura.
+              {dict.footer.newsletter_desc}
             </p>
             <form className="flex">
-              <input 
-                type="email" 
-                placeholder="Tu email" 
+              <input
+                type="email"
+                placeholder={dict.footer.newsletter_placeholder}
                 className="bg-white/5 border-none px-4 py-3 w-full text-white focus:ring-1 focus:ring-primary outline-none transition-all"
               />
               <button className="bg-primary hover:bg-primary-dark px-6 py-3 transition-colors">
@@ -75,8 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center text-white/30 text-xs tracking-widest uppercase font-bold">
-          <p>© 2026 EXTREME ADVENTURING CANCÚN. TODOS LOS DERECHOS RESERVADOS.</p>
-          <p>DISEÑADO POR ANTIGRAVITY</p>
+          <p>{dict.footer.copyright}</p>
         </div>
       </div>
     </footer>

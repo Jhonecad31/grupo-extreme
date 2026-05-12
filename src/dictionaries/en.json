@@ -1,0 +1,209 @@
+{
+  "navigation": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "footer": {
+    "description": "Leading ecopark in adventure and ecotourism in the Mayan Jungle. Committed to safety and the preservation of our natural environment.",
+    "nav_title": "Navigation",
+    "legal_title": "Legal",
+    "newsletter_title": "Newsletter",
+    "newsletter_desc": "Subscribe to receive exclusive offers and adventure news.",
+    "newsletter_placeholder": "Your email",
+    "copyright": "© 2026 EXTREME ADVENTURING CANCÚN. ALL RIGHTS RESERVED.",
+    "legal_links": [
+      "Terms and Conditions",
+      "Privacy Policy",
+      "Cookies"
+    ]
+  },
+  "home": {
+    "history": {
+      "subtitle": "Our History",
+      "title": "MORE THAN ADVENTURE, A LEGACY IN THE JUNGLE.",
+      "p1": "Extreme Adventuring Cancún was founded with a single purpose: to offer visitors a safe, natural, and unforgettable adventure inspired by the Mayan jungle.",
+      "p2": "For almost two decades, we have designed experiences that combine ecotourism, entertainment, culture, and family adventure, always prioritizing safety, environmental respect, and the preservation of the Mayan Jungle."
+    },
+    "features": {
+      "title": "What defines us:",
+      "items": [
+        "Professional ATV Circuits",
+        "Multiple zip-line towers",
+        "Natural open cenotes",
+        "Snorkeling in protected marine areas",
+        "Horseback riding trails",
+        "Cultural and gastronomic experiences",
+        "Artisanal tequila tasting"
+      ]
+    },
+    "projects_section": {
+      "subtitle": "Our Projects",
+      "title": "THE THRILL YOU'RE LOOKING FOR.",
+      "view_all": "View All",
+      "description": "Each of our developments in Puerto Morelos, Mexico City, and the State of Mexico has been designed to offer a unique experience, combining comfort, style, and functionality."
+    },
+    "stats": [
+      { "value": "20+", "label": "Years of Experience" },
+      { "value": "100k+", "label": "Annual Visitors" },
+      { "value": "15", "label": "Unique Attractions" },
+      { "value": "100%", "label": "Guaranteed Safety" }
+    ],
+    "upcoming": {
+      "badge": "In Development",
+      "title": "NEW EXPERIENCES",
+      "description": "Our team is exploring the Mayan jungle to bring you even more extreme and immersive adventures. Get ready for the unexpected.",
+      "brands_title": "Upcoming Brands"
+    },
+    "mentions": {
+      "subtitle": "Recognitions",
+      "title": "WHAT THEY SAY ABOUT US",
+      "items": [
+        {
+          "text": "An immersive jungle experience that redefines the connection with nature and local culture.",
+          "author": "National Geographic Explorer"
+        },
+        {
+          "text": "The level of safety, facilities, and staff attention make it the best park in the area.",
+          "author": "TripAdvisor Traveler's Choice"
+        },
+        {
+          "text": "Pure adrenaline combined with a deep respect for sacred cenotes. Unforgettable.",
+          "author": "Aventurero Magazine"
+        }
+      ]
+    },
+    "cta": {
+      "title": "READY FOR YOUR NEXT ADVENTURE?",
+      "description": "Let's talk about your next great experience. Our team of experts is ready to design an adventure tailored to you.",
+      "button": "Contact Us"
+    }
+  },
+  "about": {
+    "editorial": {
+      "subtitle": "Our History",
+      "title": "18 YEARS OF LEGACY.",
+      "legacy_italic": "LEGACY.",
+      "p1": "Extreme Adventuring Cancun started as a small project to support the local community after port closures. Today, we are the leading adventure ecopark on the iconic Ruta de los Cenotes in Puerto Morelos.",
+      "p2": "We are a 100% Mexican company. For almost two decades, we have designed experiences that fusion ecotourism, culture, and family adventure, always prioritizing safety and the preservation of the Mayan Jungle.",
+      "stats": [
+        { "value": "+18", "label": "Years of Experience" },
+        { "value": "NatGeo & TripAdvisor", "label": "Global Recognition" }
+      ]
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide every visitor with a safe, natural, and unforgettable adventure inspired by the majesty of the Mayan jungle."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the leading global ecopark, fusioning ecotourism, culture, and family entertainment, with absolute respect for the environment."
+    },
+    "philosophy": {
+      "subtitle": "Our Evolution",
+      "title": "MORE THAN A TOUR",
+      "description": "What began with a single tour has transformed into a comprehensive Ecopark based on trust, innovation, and warm hospitality.",
+      "cards": [
+        {
+          "title": "Extreme Adventure",
+          "text": "Full ATV circuits, multiple zip-line towers, and equestrian trails that cross the vastness of the jungle."
+        },
+        {
+          "title": "Water World",
+          "text": "Exploration of majestic open cenotes and guided snorkeling experiences in the most protected marine areas."
+        },
+        {
+          "title": "Cultural Heritage",
+          "text": "Immersion in traditions with Mayan stories, authentic gastronomy, and tequila tasting with regional heritage."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "subtitle": "Connect with us",
+    "title": "YOUR NEXT ADVENTURE STARTS HERE",
+    "description": "Ready to live the Extreme experience? Contact us for personalized bookings, corporate events, or any questions you may have.",
+    "info": {
+      "office_title": "Headquarters",
+      "office_address": "Blvd. Kukulcan Km 10.5, Hotel Zone\n77500 Cancún, Q.R., Mexico",
+      "contact_title": "Direct Contact",
+      "contact_details": "reservas@grupoextreme.com\n+52 (998) 123 4567",
+      "hours_title": "Opening Hours",
+      "hours_details": "Monday to Sunday\n8:00 AM - 6:00 PM"
+    },
+    "form": {
+      "name": "Full Name",
+      "phone": "Phone",
+      "email": "Email Address",
+      "interest": "Interest Experience",
+      "message": "Additional Message",
+      "placeholder_name": "John Doe",
+      "placeholder_phone": "+52 998 000 0000",
+      "placeholder_email": "you@email.com",
+      "placeholder_message": "How can we help you?",
+      "submit": "Send Message",
+      "options": [
+        "ATV Circuits",
+        "Extreme Zip-lines",
+        "Cenotes & Diving",
+        "Corporate Package",
+        "Other Inquiry"
+      ]
+    }
+  },
+  "projects": {
+    "subtitle": "Our Projects",
+    "title": "UNFORGETTABLE EXPERIENCES",
+    "description": "Discover our curated collection of adventures. Each experience is designed with the highest standards of safety and exclusivity.",
+    "view_details": "View Details →"
+  },
+  "projects_data": [
+    {
+      "id": "extreme_adventuring",
+      "name": "Extreme Adventuring",
+      "description": "An unforgettable experience of pure adrenaline in the Mayan jungle with zip-lines, professional ATV circuits, and exploration of hidden cenotes in virgin nature.",
+      "features": ["Extreme Zip-lines", "4x4 ATV Circuit", "Virgin Cenotes", "Regional Food", "Professional Safety Equipment"],
+      "image": "/GrupoExtreme-web/extreme-fondo.webp",
+      "logo": "/icon/logos/logo-extreme.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
+    },
+    {
+      "id": "snorkeling_adventure",
+      "name": "Snorkeling Adventure",
+      "description": "Explore the majestic coral reef. Dive and swim alongside sea turtles, stingrays, and hundreds of tropical fish in their natural habitat.",
+      "features": ["Full Snorkel Equipment", "Bilingual Certified Guide", "Fast Boat Transport", "Visit to 2 Protected Reefs"],
+      "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
+      "logo": "/icon/logos/logo-snorkel.svg",
+      "url": "https://snorkelingadventure.com/snorkel-adventuring-details/"
+    },
+    {
+      "id": "cenote_adventuring",
+      "name": "Cenote Adventuring",
+      "description": "Dive into the crystal-clear and healing waters of our exclusive cenotes. A mystical, refreshing adventure connected with Mayan culture.",
+      "features": ["Safe Free Swimming", "Life Jacket", "Private Rest Areas", "Open and Underground Cenotes"],
+      "image": "/GrupoExtreme-web/cenote-fondo.webp",
+      "logo": "/icon/logos/logo-cenote.svg",
+      "url": "https://extremeadventurecancun.com/cenotes-cancun/"
+    },
+    {
+      "id": "beach_taco_tour",
+      "name": "Beach Taco Tour",
+      "description": "An exceptional gastronomic and cultural tour. Taste the best local tacos with fresh ingredients while enjoying panoramic views of the Caribbean Sea.",
+      "features": ["Gourmet Taco Tasting", "Drinks and Mixology Included", "Sunset on the Beach", "Expert Local Culinary Guide"],
+      "image": "/GrupoExtreme-web/taco-fondo.webp",
+      "logo": "/icon/logos/logo-taco.svg",
+      "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
+    },
+    {
+      "id": "horse_ride",
+      "name": "Horse Ride",
+      "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
+      "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2-Hour Immersive Duration"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-horse.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    }
+  ]
+}

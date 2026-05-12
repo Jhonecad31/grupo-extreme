@@ -1,11 +1,9 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
 import Image from "next/image";
 
-export default function AboutPage() {
+export default function AboutContent({ lang, dict }: { lang: string; dict: any }) {
   const containerRef = useRef(null);
   
   const { scrollYProgress } = useScroll({
@@ -17,7 +15,6 @@ export default function AboutPage() {
 
   return (
     <main className="min-h-screen bg-[#f9f9f9] flex flex-col">
-      <Header />
       
       {/* Editorial Section */}
       <section ref={containerRef} className="relative py-32 mt-20 overflow-hidden flex-grow">
@@ -36,33 +33,31 @@ export default function AboutPage() {
           <div className="lg:col-span-5 flex flex-col justify-center">
             <motion.div style={{ y: textParallax }}>
               <span className="text-primary text-xs uppercase tracking-[0.5em] font-black mb-4 block">
-                Nuestra Historia
+                {dict.about.editorial.subtitle}
               </span>
               
               <h2 className="text-5xl md:text-7xl font-display font-black text-dark leading-[0.9] mb-10">
-                18 AÑOS DE <br /> <span className="text-primary italic">LEGADO.</span>
+                {dict.about.editorial.title}
               </h2>
 
               {/* MANIFIESTO */}
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed border-l-2 border-primary/20 pl-8 ml-2">
                 <p className="font-medium text-dark/80">
-                  <strong className="text-dark">Extreme Adventuring Cancun</strong> comenzó como un pequeño proyecto para apoyar a la comunidad local tras los cierres del puerto. Hoy, somos el parque ecológico de aventuras líder en la icónica Ruta de los Cenotes en Puerto Morelos.
+                  {dict.about.editorial.p1}
                 </p>
                 <p className="font-light">
-                  Somos una empresa 100% mexicana. Durante casi dos décadas, hemos diseñado experiencias que fusionan el ecoturismo, la cultura y la aventura familiar, priorizando siempre la seguridad y la preservación de la Selva Maya.
+                  {dict.about.editorial.p2}
                 </p>
               </div>
 
               {/* STATS */}
               <div className="grid grid-cols-2 gap-8 mt-16 border-t border-gray-200 pt-10">
-                <div>
-                  <h4 className="text-4xl font-display font-black text-dark">+18</h4>
-                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 mt-2">Años de Experiencia</p>
-                </div>
-                <div>
-                  <h4 className="text-2xl font-display font-black text-dark leading-tight">NatGeo &<br/>TripAdvisor</h4>
-                  <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 mt-2">Reconocimiento Global</p>
-                </div>
+                {dict.about.editorial.stats.map((stat: any, i: number) => (
+                  <div key={i}>
+                    <h4 className="text-4xl font-display font-black text-dark">{stat.value}</h4>
+                    <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-500 mt-2">{stat.label}</p>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -70,7 +65,7 @@ export default function AboutPage() {
           {/* LADO DERECHO: COMPOSICIÓN BENTO BOX (7 columnas) */}
           <div className="lg:col-span-7 relative pt-10 md:pt-20">
             <div className="grid grid-cols-2 gap-4 h-full min-h-[500px]">
-              {/* Imagen Principal (Ocupa 2 filas o la mayor parte) */}
+              {/* Imagen Principal */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -134,10 +129,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h3 className="text-primary text-sm uppercase tracking-[0.4em] font-black mb-8 border-l-4 border-primary pl-4">
-              Nuestra Misión
+              {dict.about.mission.title}
             </h3>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-dark leading-[1.1]">
-              Brindar a cada visitante una aventura segura, natural e inolvidable inspirada en la majestuosidad de la selva maya.
+              {dict.about.mission.text}
             </h2>
           </motion.div>
 
@@ -147,10 +142,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h3 className="text-primary text-sm uppercase tracking-[0.4em] font-black mb-8 border-l-4 border-primary pl-4">
-              Nuestra Visión
+              {dict.about.vision.title}
             </h3>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-black text-dark leading-[1.1]">
-              Ser el ecoparque líder a nivel global, fusionando ecoturismo, cultura y entretenimiento familiar, con un respeto absoluto por el medio ambiente.
+              {dict.about.vision.text}
             </h2>
           </motion.div>
 
@@ -158,42 +153,33 @@ export default function AboutPage() {
       </section>
 
       {/* Filosofía Section */}
-      <section className="bg-dark py-32 relative overflow-hidden flex-grow">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 transform translate-x-1/2" />
+      <section className="bg-white py-32 relative overflow-hidden flex-grow">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-white -skew-x-12 transform translate-x-1/2" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
-              Nuestra Evolución
+            <span className="text-black/50 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
+              {dict.about.philosophy.subtitle}
             </span>
-            <h2 className="text-4xl md:text-5xl text-white font-display font-black leading-tight">
-              MÁS QUE UN <span className="border-b-4 border-primary">RECORRIDO</span>
+            <h2 className="text-4xl md:text-5xl text-black font-display font-black leading-tight">
+              {dict.about.philosophy.title}
             </h2>
-            <p className="text-white/60 mt-6 max-w-2xl mx-auto text-lg">
-              Lo que comenzó con un solo tour se ha transformado en un Ecoparque integral basado en la confianza, la innovación y una cálida hospitalidad.
+            <p className="text-black/60 mt-6 max-w-2xl mx-auto text-lg">
+              {dict.about.philosophy.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div className="bg-white/5 p-10 rounded-sm backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-colors group">
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">Aventura Extrema</h3>
-              <p className="text-white/60">Circuitos completos de cuatrimotos (ATV), múltiples torres de tirolesas y senderos ecuestres que atraviesan la inmensidad de la jungla.</p>
-            </div>
-
-            <div className="bg-white/5 p-10 rounded-sm backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-colors group">
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">Mundo Acuático</h3>
-              <p className="text-white/60">Exploración de majestuosos cenotes abiertos y experiencias de snorkel guiado en las áreas marinas más protegidas.</p>
-            </div>
-
-            <div className="bg-white/5 p-10 rounded-sm backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-colors group">
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">Herencia Cultural</h3>
-              <p className="text-white/60">Inmersión en las tradiciones con relatos mayas, gastronomía auténtica y degustación de tequila con herencia regional.</p>
-            </div>
+            {dict.about.philosophy.cards.map((card: any, i: number) => (
+              <div key={i} className="bg-white/5 p-10 rounded-sm backdrop-blur-sm border border-black/10 hover:border-black/30 transition-colors group">
+                <h3 className="text-xl font-bold text-black mb-4 uppercase tracking-wider">{card.title}</h3>
+                <p className="text-black/60">{card.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

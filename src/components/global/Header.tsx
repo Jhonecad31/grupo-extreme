@@ -2,16 +2,20 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import Image from "next/image"
+import { usePathname, useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<"ES" | "EN">("ES");
+  
   const pathname = usePathname();
+  const params = useParams();
+  const router = useRouter();
+  const lang = (params.lang as string) || "es";
+
   // Solo el Home tiene un hero oscuro de fondo (el carrusel).
-  const isDarkHeroPage = pathname === "/";
+  const isDarkHeroPage = pathname === `/${lang}` || pathname === `/${lang}/`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,12 +37,32 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
+  // Esto idealmente vendría de un diccionario pasado por props o context, 
+  // pero para simplificar en el Header client-side lo definimos basándonos en lang
+  const navDict = lang === "es" ? {
+    home: "Inicio",
+    projects: "Proyectos",
+    about: "Nosotros",
+    contact: "Contacto"
+  } : {
+    home: "Home",
+    projects: "Projects",
+    about: "About Us",
+    contact: "Contact"
+  };
+
   const navLinks = [
-    { name: "Inicio", href: "/" },
-    { name: "Proyectos", href: "/projects" },
-    { name: "Nosotros", href: "/about" },
-    { name: "Contacto", href: "/contact" },
+    { name: navDict.home, href: `/${lang}` },
+    { name: navDict.projects, href: `/${lang}/projects` },
+    { name: navDict.about, href: `/${lang}/about` },
+    { name: navDict.contact, href: `/${lang}/contact` },
   ];
+
+  const toggleLanguage = () => {
+    const newLang = lang === "es" ? "en" : "es";
+    const newPath = pathname.replace(`/${lang}`, `/${newLang}`);
+    router.push(newPath);
+  };
 
   const logo = "/icon/logos/logo-grupo-extreme.svg";
 
@@ -49,7 +73,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo Section */}
-        <Link href="/" className="flex items-center space-x-3 group relative z-[70]">
+        <Link href={`/${lang}`} className="flex items-center space-x-3 group relative z-[70]">
           <div className="relative w-20 h-15 transition-transform duration-300 group-hover:scale-110">
             <Image
               src={logo}
@@ -74,7 +98,7 @@ export default function Header() {
             </Link>
           ))}
           <button
-            onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
+            onClick={toggleLanguage}
             className={`px-4 py-2 rounded-full text-sm font-bold tracking-widest transition-all duration-300 flex items-center space-x-2 border-2 ${isScrolled || !isDarkHeroPage
               ? "border-dark text-dark hover:bg-dark hover:text-white"
               : "border-white/50 text-white hover:border-white hover:bg-white/10"
@@ -83,7 +107,7 @@ export default function Header() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>{language}</span>
+            <span>{lang.toUpperCase()}</span>
           </button>
         </nav>
 
@@ -124,13 +148,13 @@ export default function Header() {
             style={{ transitionDelay: "400ms" }}
           >
             <button
-              onClick={() => setLanguage(language === "ES" ? "EN" : "ES")}
+              onClick={toggleLanguage}
               className="px-6 py-3 rounded-full text-sm font-bold tracking-widest transition-all duration-300 flex items-center space-x-2 border-2 border-white/50 text-white hover:border-white hover:bg-white/10"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>{language}</span>
+              <span>{lang.toUpperCase()}</span>
             </button>
           </div>
         </nav>

@@ -3,37 +3,59 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const slides = [
-  {
-    title: "AVENTURA SIN LÍMITES EN CANCÚN",
-    subtitle: "Descubre la emoción de la selva maya con experiencias diseñadas para toda la familia.",
-    image: "/GrupoExtreme-web/moto-hero.webp",
-  },
-  {
-    title: "EXPLORA LO INEXPLORADO",
-    subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
-    image: "/GrupoExtreme-web/buggy-hero.webp",
-  },
-  {
-    title: "DESAFÍA TUS SENTIDOS",
-    subtitle: "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
-    image: "/GrupoExtreme-web/motoext-hero.webp",
-  },
-];
+export default function HeroCarousel({ lang = "es" }: { lang?: string }) {
+  const dict = lang === "es" ? {
+    explore: "Explorar Aventuras",
+    slides: [
+      {
+        title: "AVENTURA SIN LÍMITES EN CANCÚN",
+        subtitle: "Descubre la emoción de la selva maya con experiencias diseñadas para toda la familia.",
+        image: "/GrupoExtreme-web/moto-hero.webp",
+      },
+      {
+        title: "EXPLORA LO INEXPLORADO",
+        subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
+        image: "/GrupoExtreme-web/buggy-hero.webp",
+      },
+      {
+        title: "DESAFÍA TUS SENTIDOS",
+        subtitle: "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
+        image: "/GrupoExtreme-web/motoext-hero.webp",
+      },
+    ]
+  } : {
+    explore: "Explore Adventures",
+    slides: [
+      {
+        title: "UNLIMITED ADVENTURE IN CANCUN",
+        subtitle: "Discover the thrill of the Mayan jungle with experiences designed for the whole family.",
+        image: "/GrupoExtreme-web/moto-hero.webp",
+      },
+      {
+        title: "EXPLORE THE UNEXPLORED",
+        subtitle: "ATVs, ziplines, cenotes and much more in a natural and safe environment.",
+        image: "/GrupoExtreme-web/buggy-hero.webp",
+      },
+      {
+        title: "CHALLENGE YOUR SENSES",
+        subtitle: "Drive powerful ATVs through technical trails and master the heights in the fastest zipline circuit.",
+        image: "/GrupoExtreme-web/motoext-hero.webp",
+      },
+    ]
+  };
 
-export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % dict.slides.length);
     }, 6000);
     return () => clearInterval(timer);
-  }, []);
+  }, [dict.slides.length]);
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-dark">
-      {slides.map((slide, index) => (
+      {dict.slides.map((slide, index) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100 scale-105" : "opacity-0 scale-100"
@@ -58,21 +80,21 @@ export default function HeroCarousel() {
           </span>
         </div>
         <h1 className="text-5xl md:text-8xl text-white font-display font-black tracking-tighter max-w-5xl leading-[0.9] mb-8 animate-fade-in">
-          {slides[current].title}
+          {dict.slides[current].title}
         </h1>
         <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 animate-fade-in delay-200">
-          {slides[current].subtitle}
+          {dict.slides[current].subtitle}
         </p>
         <div className="flex justify-center animate-fade-in delay-500">
           <button className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
-            Explorar Aventuras
+            {dict.explore}
           </button>
         </div>
       </div>
 
       {/* Progress indicators */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex space-x-3">
-        {slides.map((_, i) => (
+        {dict.slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+import Header from "@/components/global/Header";
+import Footer from "@/components/global/Footer";
 import { projectsData } from "@/data/projects";
 import Link from "next/link";
 
@@ -20,16 +20,16 @@ export default async function InfoProjectsPage({
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative w-full h-[55vh] bg-black flex items-center justify-center">
-        <img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.name}
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-        
+
         {/* Botón de volver */}
         <div className="absolute top-32 left-6 md:left-12 z-20">
           <Link href="/projects" className="text-white/80 hover:text-white transition-all flex items-center uppercase tracking-[0.2em] text-xs font-bold group">
@@ -45,17 +45,17 @@ export default async function InfoProjectsPage({
         {/* Contenido Centrado */}
         <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center pt-16">
           {project.logo && (
-            <img 
-              src={project.logo} 
-              alt={`${project.name} logo`} 
+            <img
+              src={project.logo}
+              alt={`${project.name} logo`}
               className="w-32 md:w-40 h-auto object-contain mb-8 animate-fade-in drop-shadow-2xl"
             />
           )}
-          
+
           <h1 className="text-3xl md:text-5xl text-white font-display font-black leading-tight animate-slide-up tracking-widest drop-shadow-lg">
             {project.name.toUpperCase()}
           </h1>
-          
+
           <div className="flex items-center justify-center gap-3 mt-6 text-white/90 animate-fade-in delay-200">
             <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -116,14 +116,14 @@ export default async function InfoProjectsPage({
                 CONOCE MÁS DEL <span className="text-primary">PROYECTO</span>
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {project.gallery.map((img, index) => (
                 <div key={index} className="aspect-square relative overflow-hidden group rounded-sm shadow-md">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
-                  <img 
-                    src={img} 
-                    alt={`${project.name} gallery ${index + 1}`} 
+                  <img
+                    src={img}
+                    alt={`${project.name} gallery ${index + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>

@@ -1,39 +1,63 @@
 "use client";
 import { motion } from "framer-motion";
 
-const mentions = [
-  {
-    text: "Una experiencia inmersiva en la selva que redefine la conexión con la naturaleza y la cultura local.",
-    author: "National Geographic Explorer",
-    rating: 5
-  },
-  {
-    text: "El nivel de seguridad, las instalaciones y la atención del personal lo hacen el mejor parque de la zona.",
-    author: "TripAdvisor Traveler's Choice",
-    rating: 5
-  },
-  {
-    text: "Adrenalina pura combinada con un profundo respeto por los cenotes sagrados. Inolvidable.",
-    author: "Revista Aventurero",
-    rating: 5
-  }
-];
+export default function Mentions({ lang = "es" }: { lang?: string }) {
+  const dict = lang === "es" ? {
+    subtitle: "Reconocimientos",
+    title: "LO QUE DICEN DE NOSOTROS",
+    mentions: [
+      {
+        text: "Una experiencia inmersiva en la selva que redefine la conexión con la naturaleza y la cultura local.",
+        author: "National Geographic Explorer",
+        rating: 5
+      },
+      {
+        text: "El nivel de seguridad, las instalaciones y la atención del personal lo hacen el mejor parque de la zona.",
+        author: "TripAdvisor Traveler's Choice",
+        rating: 5
+      },
+      {
+        text: "Adrenalina pura combinada con un profundo respeto por los cenotes sagrados. Inolvidable.",
+        author: "Revista Aventurero",
+        rating: 5
+      }
+    ]
+  } : {
+    subtitle: "Recognitions",
+    title: "WHAT THEY SAY ABOUT US",
+    mentions: [
+      {
+        text: "An immersive jungle experience that redefines the connection with nature and local culture.",
+        author: "National Geographic Explorer",
+        rating: 5
+      },
+      {
+        text: "The level of safety, facilities, and staff attention make it the best park in the area.",
+        author: "TripAdvisor Traveler's Choice",
+        rating: 5
+      },
+      {
+        text: "Pure adrenaline combined with a deep respect for sacred cenotes. Unforgettable.",
+        author: "Aventurero Magazine",
+        rating: 5
+      }
+    ]
+  };
 
-export default function Mentions() {
   return (
     <section className="bg-[#f9f9f9] py-32 border-y border-gray-200">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
-            Reconocimientos
+            {dict.subtitle}
           </span>
           <h2 className="text-4xl md:text-5xl text-dark font-display font-black leading-tight">
-            LO QUE DICEN <span className="border-b-4 border-primary">DE NOSOTROS</span>
+            {dict.title}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {mentions.map((mention, i) => (
+          {dict.mentions.map((mention, i) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 30 }}

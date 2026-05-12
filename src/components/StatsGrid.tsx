@@ -1,10 +1,8 @@
-export default function StatsGrid() {
-  const stats = [
-    { value: "20+", label: "Años de Experiencia" },
-    { value: "100k+", label: "Visitantes Anuales" },
-    { value: "15", label: "Atracciones Únicas" },
-    { value: "100%", label: "Seguridad Garantizada" },
-  ];
+import { getDictionary } from "@/lib/get-dictionary";
+
+export default async function StatsGrid({ lang = "es" }: { lang?: string }) {
+  const dict = await getDictionary(lang as "en" | "es");
+  const stats = dict.home.stats;
 
   return (
     <section className="py-24 bg-gray-soft">

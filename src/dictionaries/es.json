@@ -1,0 +1,209 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "blog": "Blog"
+  },
+  "footer": {
+    "description": "Ecoparque líder en aventura y ecoturismo en la Selva Maya. Comprometidos con la seguridad y la preservación de nuestro entorno natural.",
+    "nav_title": "Navegación",
+    "legal_title": "Legal",
+    "newsletter_title": "Newsletter",
+    "newsletter_desc": "Suscríbete para recibir ofertas exclusivas y noticias de aventura.",
+    "newsletter_placeholder": "Tu email",
+    "copyright": "© 2026 EXTREME ADVENTURING CANCÚN. TODOS LOS DERECHOS RESERVADOS.",
+    "legal_links": [
+      "Términos y Condiciones",
+      "Política de Privacidad",
+      "Cookies"
+    ]
+  },
+  "home": {
+    "history": {
+      "subtitle": "Nuestra Historia",
+      "title": "MÁS QUE AVENTURA, UN LEGADO EN LA SELVA.",
+      "p1": "Extreme Adventuring Cancún se fundó con un único propósito: ofrecer a los visitantes una aventura segura, natural e inolvidable inspirada en la selva maya.",
+      "p2": "Durante casi dos décadas, hemos diseñado experiencias que combinan ecoturismo, entretenimiento, cultura y aventura familiar, siempre priorizando la seguridad, el respeto medioambiental y la preservación de la Selva Maya."
+    },
+    "features": {
+      "title": "Lo que nos define:",
+      "items": [
+        "Circuitos de ATV Profesionales",
+        "Múltiples torres de tirolina",
+        "Cenotes abiertos naturales",
+        "Esnórquel en áreas marinas protegidas",
+        "Senderos para montar a caballo",
+        "Experiencias culturales y gastronómicas",
+        "Cata de tequila artesanal"
+      ]
+    },
+    "projects_section": {
+      "subtitle": "Nuestros proyectos",
+      "title": "LA EMOCIÓN QUE BUSCAS.",
+      "view_all": "Ver Todas",
+      "description": "Cada uno de nuestros desarrollos en Puerto Morelos, Ciudad de Mexico y Estado de Mexico ha sido diseñado para ofrecer una experiencia única, combinando confort, estilo y funcionalidad."
+    },
+    "stats": [
+      { "value": "20+", "label": "Años de Experiencia" },
+      { "value": "100k+", "label": "Visitantes Anuales" },
+      { "value": "15", "label": "Atracciones Únicas" },
+      { "value": "100%", "label": "Seguridad Garantizada" }
+    ],
+    "upcoming": {
+      "badge": "En Desarrollo",
+      "title": "NUEVAS EXPERIENCIAS",
+      "description": "Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.",
+      "brands_title": "Próximas Marcas"
+    },
+    "mentions": {
+      "subtitle": "Reconocimientos",
+      "title": "LO QUE DICEN DE NOSOTROS",
+      "items": [
+        {
+          "text": "Una experiencia inmersiva en la selva que redefine la conexión con la naturaleza y la cultura local.",
+          "author": "National Geographic Explorer"
+        },
+        {
+          "text": "El nivel de seguridad, las instalaciones y la atención del personal lo hacen el mejor parque de la zona.",
+          "author": "TripAdvisor Traveler's Choice"
+        },
+        {
+          "text": "Adrenalina pura combinada con un profundo respeto por los cenotes sagrados. Inolvidable.",
+          "author": "Revista Aventurero"
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿LISTO PARA TU PRÓXIMA AVENTURA?",
+      "description": "Hablemos sobre tu próxima gran experiencia. Nuestro equipo de expertos está listo para diseñar una aventura a tu medida.",
+      "button": "Contáctanos"
+    }
+  },
+  "about": {
+    "editorial": {
+      "subtitle": "Nuestra Historia",
+      "title": "18 AÑOS DE LEGADO.",
+      "legacy_italic": "LEGADO.",
+      "p1": "Extreme Adventuring Cancun comenzó como un pequeño proyecto para apoyar a la comunidad local tras los cierres del puerto. Hoy, somos el parque ecológico de aventuras líder en la icónica Ruta de los Cenotes en Puerto Morelos.",
+      "p2": "Somos una empresa 100% mexicana. Durante casi dos décadas, hemos diseñado experiencias que fusionan el ecoturismo, la cultura y la aventura familiar, priorizando siempre la seguridad y la preservación de la Selva Maya.",
+      "stats": [
+        { "value": "+18", "label": "Años de Experiencia" },
+        { "value": "NatGeo & TripAdvisor", "label": "Reconocimiento Global" }
+      ]
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "text": "Brindar a cada visitante una aventura segura, natural e inolvidable inspirada en la majestuosidad de la selva maya."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "text": "Ser el ecoparque líder a nivel global, fusionando ecoturismo, cultura y entretenimiento familiar, con un respeto absoluto por el medio ambiente."
+    },
+    "philosophy": {
+      "subtitle": "Nuestra Evolución",
+      "title": "MÁS QUE UN RECORRIDO",
+      "description": "Lo que comenzó con un solo tour se ha transformado en un Ecoparque integral basado en la confianza, la innovación y una cálida hospitalidad.",
+      "cards": [
+        {
+          "title": "Aventura Extrema",
+          "text": "Circuitos completos de cuatrimotos (ATV), múltiples torres de tirolesas y senderos ecuestres que atraviesan la inmensidad de la jungla."
+        },
+        {
+          "title": "Mundo Acuático",
+          "text": "Exploración de majestuosos cenotes abiertos y experiencias de snorkel guiado en las áreas marinas más protegidas."
+        },
+        {
+          "title": "Herencia Cultural",
+          "text": "Inmersión en las tradiciones con relatos mayas, gastronomía auténtica y degustación de tequila con herencia regional."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "subtitle": "Conecta con nosotros",
+    "title": "TU PRÓXIMA AVENTURA COMIENZA AQUÍ",
+    "description": "¿Listo para vivir la experiencia Extreme? Contáctanos para reservas personalizadas, eventos corporativos o cualquier duda que tengas.",
+    "info": {
+      "office_title": "Oficina Central",
+      "office_address": "Blvd. Kukulcan Km 10.5, Zona Hotelera\n77500 Cancún, Q.R., México",
+      "contact_title": "Contacto Directo",
+      "contact_details": "reservas@grupoextreme.com\n+52 (998) 123 4567",
+      "hours_title": "Horario de Atención",
+      "hours_details": "Lunes a Domingo\n8:00 AM - 6:00 PM"
+    },
+    "form": {
+      "name": "Nombre Completo",
+      "phone": "Teléfono",
+      "email": "Correo Electrónico",
+      "interest": "Experiencia de Interés",
+      "message": "Mensaje Adicional",
+      "placeholder_name": "Juan Pérez",
+      "placeholder_phone": "+52 998 000 0000",
+      "placeholder_email": "tu@correo.com",
+      "placeholder_message": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar Mensaje",
+      "options": [
+        "Circuitos ATV",
+        "Tirolinas Extremas",
+        "Cenotes y Buceo",
+        "Paquete Corporativo",
+        "Otra Consulta"
+      ]
+    }
+  },
+  "projects": {
+    "subtitle": "Nuestros proyectos",
+    "title": "EXPERIENCIAS INOLVIDABLES",
+    "description": "Descubre nuestra colección curada de aventuras. Cada experiencia está diseñada con los más altos estándares de seguridad y exclusividad.",
+    "view_details": "Ver Detalles →"
+  },
+  "projects_data": [
+    {
+      "id": "extreme_adventuring",
+      "name": "Extreme Adventuring",
+      "description": "Una experiencia inolvidable de pura adrenalina en la selva maya con tirolesas, circuitos ATVs profesionales y exploración de cenotes ocultos en la naturaleza vírgen.",
+      "features": ["Tirolesas Extremas", "Circuito ATV 4x4", "Cenotes Vírgenes", "Comida Regional", "Equipamiento de Seguridad Profesional"],
+      "image": "/GrupoExtreme-web/extreme-fondo.webp",
+      "logo": "/icon/logos/logo-extreme.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
+    },
+    {
+      "id": "snorkeling_adventure",
+      "name": "Snorkeling Adventure",
+      "description": "Explora la majestuosa barrera de coral. Sumérgete y nada junto a tortugas marinas, mantarrayas y cientos de peces tropicales en su hábitat natural.",
+      "features": ["Equipo de Snorkel Completo", "Guía Certificado bilingüe", "Transporte en Lancha rápida", "Visita a 2 Arrecifes Protegidos"],
+      "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
+      "logo": "/icon/logos/logo-snorkel.svg",
+      "url": "https://snorkelingadventure.com/snorkel-adventuring-details/"
+    },
+    {
+      "id": "cenote_adventuring",
+      "name": "Cenote Adventuring",
+      "description": "Sumérgete en las aguas cristalinas y curativas de nuestros cenotes exclusivos. Una aventura mística, refrescante y conectada con la cultura maya.",
+      "features": ["Nado Libre Seguro", "Chaleco Salvavidas", "Zonas de Descanso Privadas", "Cenotes Abiertos y Subterráneos"],
+      "image": "/GrupoExtreme-web/cenote-fondo.webp",
+      "logo": "/icon/logos/logo-cenote.svg",
+      "url": "https://extremeadventurecancun.com/cenotes-cancun/"
+    },
+    {
+      "id": "beach_taco_tour",
+      "name": "Beach Taco Tour",
+      "description": "Un recorrido gastronómico y cultural excepcional. Degusta los mejores tacos locales con ingredientes frescos mientras disfruta de las vistas panorámicas frente al mar Caribe.",
+      "features": ["Degustación de Tacos Gourmet", "Bebidas y Mixología Incluidas", "Atardecer en la Playa", "Experto Guía Culinario Local"],
+      "image": "/GrupoExtreme-web/taco-fondo.webp",
+      "logo": "/icon/logos/logo-taco.svg",
+      "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
+    },
+    {
+      "id": "horse_ride",
+      "name": "Horse Ride",
+      "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
+      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
+      "image": "/GrupoExtreme-web/horse-fondo.webp",
+      "logo": "/icon/logos/logo-horse.svg",
+      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
+    }
+  ]
+}

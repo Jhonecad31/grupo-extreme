@@ -44,7 +44,19 @@ const tours = [
   },
 ];
 
-export default function Adventures() {
+export default function Adventures({ lang = "es" }: { lang?: string }) {
+  const dict = lang === "es" ? {
+    subtitle: "Nuestros proyectos",
+    title: "LA EMOCIÓN QUE BUSCAS.",
+    view_all: "Ver Todas",
+    description: "Cada uno de nuestros desarrollos en Puerto Morelos, Ciudad de Mexico y Estado de Mexico ha sido diseñado para ofrecer una experiencia única, combinando confort, estilo y funcionalidad."
+  } : {
+    subtitle: "Our Projects",
+    title: "THE THRILL YOU'RE LOOKING FOR.",
+    view_all: "View All",
+    description: "Each of our developments in Puerto Morelos, Mexico City, and the State of Mexico has been designed to offer a unique experience, combining comfort, style, and functionality."
+  };
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },
     [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: true })]
@@ -74,14 +86,14 @@ export default function Adventures() {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div className="max-w-2xl">
           <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block animate-fade-in">
-            Nuestros proyectos
+            {dict.subtitle}
           </span>
           <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up">
-            LA EMOCIÓN QUE <span className="font-black">BUSCAS.</span>
+            {dict.title}
           </h2>
         </div>
-        <Link href="/projects" className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
-          Ver Todas
+        <Link href={`/${lang}/projects`} className="group flex items-center text-dark font-bold uppercase tracking-widest text-sm border-b-2 border-dark pb-2 hover:border-primary hover:text-primary transition-all duration-300">
+          {dict.view_all}
           <svg className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
@@ -89,8 +101,7 @@ export default function Adventures() {
       </div>
       <div className="text-center mb-12 max-w-4xl mx-auto">
         <p className="text-[#555] text-lg md:text-xl font-light leading-relaxed">
-          Cada uno de nuestros desarrollos en Puerto Morelos, Ciudad de Mexico y Estado de Mexico ha sido
-          diseñado para ofrecer una experiencia única, combinando confort, estilo y funcionalidad.
+          {dict.description}
         </p>
       </div>
 

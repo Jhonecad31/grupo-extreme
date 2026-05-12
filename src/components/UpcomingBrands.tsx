@@ -2,7 +2,19 @@
 import Image from "next/image";
 import { upcomingBrands } from "@/data/projects";
 
-export default function UpcomingBrands() {
+export default function UpcomingBrands({ lang = "es" }: { lang?: string }) {
+  const dict = lang === "es" ? {
+    badge: "En Desarrollo",
+    title: "NUEVAS EXPERIENCIAS",
+    description: "Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.",
+    brands_title: "Próximas Marcas"
+  } : {
+    badge: "In Development",
+    title: "NEW EXPERIENCES",
+    description: "Our team is exploring the Mayan jungle to bring you even more extreme and immersive adventures. Get ready for the unexpected.",
+    brands_title: "Upcoming Brands"
+  };
+
   if (!upcomingBrands || upcomingBrands.length === 0) return null;
 
   return (
@@ -14,19 +26,19 @@ export default function UpcomingBrands() {
       <div className="relative z-10">
         <span className="inline-flex items-center justify-center space-x-3 text-primary font-bold tracking-[0.4em] uppercase text-xs mb-6">
           <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_10px_rgba(255,165,0,0.8)]" />
-          <span>En Desarrollo</span>
+          <span>{dict.badge}</span>
         </span>
         <h3 className="text-3xl md:text-5xl text-white font-display font-black leading-tight mb-6">
-          NUEVAS EXPERIENCIAS <br />
+          {dict.title} <br />
         </h3>
         <p className="text-white/60 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.
+          {dict.description}
         </p>
 
         {/* Contenedor de Nuevos Logos */}
         <div className="mt-16 pt-12 border-t border-white/10">
           <p className="text-white/40 text-sm uppercase tracking-widest mb-8 font-bold">
-            Próximas Marcas
+            {dict.brands_title}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             {upcomingBrands.map((brand, i) => (

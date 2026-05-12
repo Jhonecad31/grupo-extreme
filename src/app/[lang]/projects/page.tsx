@@ -1,29 +1,33 @@
-import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
 import Image from "next/image";
 import UpcomingBrands from "@/components/UpcomingBrands";
 
-export default function ProyectosPage() {
+import { getDictionary } from "@/lib/get-dictionary";
+
+export default async function ProyectosPage(props: {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await props.params;
+  const dict = await getDictionary(lang as "en" | "es");
+
   return (
     <main className="min-h-screen bg-white">
-      <Header />
       <div className="pt-32 pb-24">
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center max-w-3xl mx-auto">
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block animate-fade-in">
-              Nuestros proyectos
+              {dict.projects.subtitle}
             </span>
             <h1 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up mb-6">
-              EXPERIENCIAS <span className="text-primary italic">INOLVIDABLES</span>
+              {dict.projects.title}
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Descubre nuestra colección curada de aventuras. Cada experiencia está diseñada con los más altos estándares de seguridad y exclusividad.
+              {dict.projects.description}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectsData.map((project) => (
+            {dict.projects_data.map((project: any) => (
               <a
                 href={project.url}
                 target="_blank"
@@ -86,7 +90,7 @@ export default function ProyectosPage() {
                       )}
                       <div className="pt-2">
                         <span className="text-white font-bold text-sm tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          Ver Detalles →
+                          {lang === "es" ? "Ver Detalles →" : "View Details →"}
                         </span>
                       </div>
                     </div>
@@ -96,11 +100,10 @@ export default function ProyectosPage() {
             ))}
           </div>
           <div className="mt-32">
-            <UpcomingBrands />
+            <UpcomingBrands lang={lang} />
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }
