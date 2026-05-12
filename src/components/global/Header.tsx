@@ -5,17 +5,15 @@ import Link from "next/link";
 import { usePathname, useParams, useRouter } from "next/navigation";
 import Image from "next/image";
 
-export default function Header() {
+export default function Header({ dict, lang }: { dict: any; lang: string }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const pathname = usePathname();
-  const params = useParams();
   const router = useRouter();
-  const lang = (params.lang as string) || "es";
 
   // Solo el Home tiene un hero oscuro de fondo (el carrusel).
-  const isDarkHeroPage = pathname === "/" || pathname === "/en" || pathname === "/en/";
+  const isDarkHeroPage = pathname === `/${lang}` || pathname === `/${lang}/`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,23 +35,11 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
-  const navDict = lang === "es" ? {
-    home: "Inicio",
-    projects: "Proyectos",
-    about: "Nosotros",
-    contact: "Contacto"
-  } : {
-    home: "Home",
-    projects: "Projects",
-    about: "About Us",
-    contact: "Contact"
-  };
-
   const navLinks = [
-    { name: navDict.home, href: "/" },
-    { name: navDict.projects, href: "/projects" },
-    { name: navDict.about, href: "/about" },
-    { name: navDict.contact, href: "/contact" },
+    { name: dict.home, href: `/${lang}` },
+    { name: dict.projects, href: `/${lang}/projects` },
+    { name: dict.about, href: `/${lang}/about` },
+    { name: dict.contact, href: `/${lang}/contact` },
   ];
 
   const toggleLanguage = () => {

@@ -1,8 +1,4 @@
-import { getDictionary } from "@/lib/get-dictionary";
-
-export default async function StatsGrid({ lang = "es" }: { lang?: string }) {
-  const dict = await getDictionary(lang as "en" | "es");
-  const stats = dict.home.stats;
+export default function StatsGrid({ stats }: { stats: any[] }) {
 
   return (
     <section className="py-24 bg-gray-soft">

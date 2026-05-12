@@ -44,18 +44,7 @@ const tours = [
   },
 ];
 
-export default function Adventures({ lang = "es" }: { lang?: string }) {
-  const dict = lang === "es" ? {
-    subtitle: "Nuestros proyectos",
-    title: "LA EMOCIÓN QUE BUSCAS.",
-    view_all: "Ver Todas",
-    description: "Cada uno de nuestros desarrollos en Puerto Morelos, Ciudad de Mexico y Estado de Mexico ha sido diseñado para ofrecer una experiencia única, combinando confort, estilo y funcionalidad."
-  } : {
-    subtitle: "Our Projects",
-    title: "THE THRILL YOU'RE LOOKING FOR.",
-    view_all: "View All",
-    description: "Each of our developments in Puerto Morelos, Mexico City, and the State of Mexico has been designed to offer a unique experience, combining comfort, style, and functionality."
-  };
+export default function Adventures({ dict }: { dict: any }) {
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "start" },

@@ -1,10 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { getDictionary } from "@/lib/get-dictionary";
-
-export default async function Footer({ lang = "es" }: { lang?: string }) {
-  const dict = await getDictionary(lang as "en" | "es");
+export default function Footer({ dict, lang = "es" }: { dict: any; lang?: string }) {
 
   return (
     <footer className="bg-dark text-white pt-24 pb-12">

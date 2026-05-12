@@ -2,58 +2,57 @@
 import Image from "next/image";
 import { upcomingBrands } from "@/data/projects";
 
-export default function UpcomingBrands({ lang = "es" }: { lang?: string }) {
-  const dict = lang === "es" ? {
-    badge: "En Desarrollo",
-    title: "NUEVAS EXPERIENCIAS",
-    description: "Nuestro equipo está explorando la selva maya para traerte aventuras aún más extremas e inmersivas. Prepárate para lo inesperado.",
-    brands_title: "Próximas Marcas"
-  } : {
-    badge: "In Development",
-    title: "NEW EXPERIENCES",
-    description: "Our team is exploring the Mayan jungle to bring you even more extreme and immersive adventures. Get ready for the unexpected.",
-    brands_title: "Upcoming Brands"
-  };
+export default function UpcomingBrands({ dict }: { dict: any }) {
 
   if (!upcomingBrands || upcomingBrands.length === 0) return null;
 
   return (
-    <div className="relative overflow-hidden rounded-sm bg-dark p-8 md:p-16 text-center group">
-      <div className="absolute inset-0 opacity-10 bg-[url('/GrupoExtreme-web/moto-hero.webp')] bg-cover bg-center grayscale transition-transform duration-1000 group-hover:scale-105" />
-      <div className="absolute inset-0 bg-dark/80" />
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
-      
-      <div className="relative z-10">
-        <span className="inline-flex items-center justify-center space-x-3 text-primary font-bold tracking-[0.4em] uppercase text-xs mb-6">
-          <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_rgba(255,165,0,0.4)]" />
-          <span>{dict.badge}</span>
-        </span>
-        <h3 className="text-3xl md:text-5xl text-white font-display font-black leading-tight mb-6">
-          {dict.title} <br />
-        </h3>
-        <p className="text-white/60 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          {dict.description}
-        </p>
-
-        {/* Contenedor de Logos */}
-        <div className="mt-16 pt-12 border-t border-white/10">
-          <p className="text-white/40 text-sm uppercase tracking-widest mb-8 font-bold">
+    <div className="py-24 border-t border-gray-100">
+      <div className="container mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto mb-20">
+          <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">
             {dict.brands_title}
+          </span>
+          <h2 className="text-4xl md:text-5xl text-dark font-display font-black mb-6">
+            {dict.title}
+          </h2>
+          <div className="w-12 h-1 bg-primary mx-auto mb-8" />
+          <p className="text-gray-500 text-lg font-light leading-relaxed">
+            {dict.description}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-            {upcomingBrands.map((brand, i) => (
-              brand.logo && (
-                <div key={i} className="w-32 h-24 relative flex items-center justify-center grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500 cursor-pointer group/logo">
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {upcomingBrands.map((brand, i) => (
+            brand.logo && (
+              <div 
+                key={i} 
+                className="group relative bg-[#fcfcfc] border border-gray-100 rounded-[2.5rem] p-16 md:p-24 transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] hover:border-gray-200"
+              >
+                <div className="absolute top-8 left-1/2 -translate-x-1/2">
+                   <span className="text-[10px] text-gray-300 uppercase tracking-[0.2em] font-bold group-hover:text-primary transition-colors">
+                     {dict.badge}
+                   </span>
+                </div>
+                
+                <div className="relative aspect-[3/2] flex items-center justify-center grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700">
                   <Image
                     src={brand.logo}
                     alt={`Logo ${brand.name}`}
-                    fill
-                    className="object-contain"
+                    width={320}
+                    height={200}
+                    className="w-full h-auto max-h-full object-contain transform group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-              )
-            ))}
-          </div>
+
+                <div className="mt-12">
+                   <h4 className="text-dark/20 text-xs uppercase tracking-[0.5em] font-black group-hover:text-dark transition-colors duration-500">
+                     {brand.name}
+                   </h4>
+                </div>
+              </div>
+            )
+          ))}
         </div>
       </div>
     </div>

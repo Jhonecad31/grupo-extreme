@@ -49,4 +49,4 @@ Sigue estos pasos para correr el proyecto en tu entorno local:
    npm run dev
    ```
 ---
-*Diseñado y desarrollado para Grupo Extreme (Est. 2008).*
+

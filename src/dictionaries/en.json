@@ -21,6 +21,27 @@
     ]
   },
   "home": {
+    "hero": {
+      "explore": "Explore Adventures",
+      "book": "Book Now",
+      "slides": [
+        {
+          "title": "UNLIMITED ADVENTURE IN CANCUN",
+          "subtitle": "Discover the thrill of the Mayan jungle with experiences designed for the whole family.",
+          "image": "/GrupoExtreme-web/moto-hero.webp"
+        },
+        {
+          "title": "EXPLORE THE UNEXPLORED",
+          "subtitle": "ATVs, ziplines, cenotes and much more in a natural and safe environment.",
+          "image": "/GrupoExtreme-web/buggy-hero.webp"
+        },
+        {
+          "title": "CHALLENGE YOUR SENSES",
+          "subtitle": "Drive powerful ATVs through technical trails and master the heights in the fastest zipline circuit.",
+          "image": "/GrupoExtreme-web/motoext-hero.webp"
+        }
+      ]
+    },
     "history": {
       "subtitle": "Our History",
       "title": "MORE THAN ADVENTURE, A LEGACY IN THE JUNGLE.",
@@ -44,6 +65,27 @@
       "title": "THE THRILL YOU'RE LOOKING FOR.",
       "view_all": "View All",
       "description": "Each of our developments in Puerto Morelos, Mexico City, and the State of Mexico has been designed to offer a unique experience, combining comfort, style, and functionality."
+    },
+    "mentions": {
+      "subtitle": "Recognitions",
+      "title": "WHAT THEY SAY ABOUT US",
+      "items": [
+        {
+          "text": "An immersive jungle experience that redefines the connection with nature and local culture.",
+          "author": "National Geographic Explorer",
+          "rating": 5
+        },
+        {
+          "text": "The level of safety, facilities, and staff attention make it the best park in the area.",
+          "author": "TripAdvisor Traveler's Choice",
+          "rating": 5
+        },
+        {
+          "text": "Pure adrenaline combined with a deep respect for sacred cenotes. Unforgettable.",
+          "author": "Aventurero Magazine",
+          "rating": 5
+        }
+      ]
     },
     "stats": [
       { "value": "20+", "label": "Years of Experience" },
@@ -157,7 +199,17 @@
     "subtitle": "Our Projects",
     "title": "UNFORGETTABLE EXPERIENCES",
     "description": "Discover our curated collection of adventures. Each experience is designed with the highest standards of safety and exclusivity.",
-    "view_details": "View Details →"
+    "view_details": "View Details →",
+    "groups": {
+      "unique": "UNIQUE ADVENTURES",
+      "full": "FULL ADVENTURES"
+    },
+    "upcoming_brands": {
+      "badge": "Coming Soon",
+      "title": "New Experiences",
+      "description": "We are expanding our horizons to take adventure to new limits.",
+      "brands_title": "IN DEVELOPMENT"
+    }
   },
   "projects_data": [
     {
@@ -167,6 +219,7 @@
       "features": ["Extreme Zip-lines", "4x4 ATV Circuit", "Virgin Cenotes", "Regional Food", "Professional Safety Equipment"],
       "image": "/GrupoExtreme-web/extreme-fondo.webp",
       "logo": "/icon/logos/logo-extreme.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
     },
     {
@@ -176,6 +229,7 @@
       "features": ["Full Snorkel Equipment", "Bilingual Certified Guide", "Fast Boat Transport", "Visit to 2 Protected Reefs"],
       "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
       "logo": "/icon/logos/logo-snorkel.svg",
+      "group": "unique",
       "url": "https://snorkelingadventure.com/snorkel-adventuring-details/"
     },
     {
@@ -185,6 +239,7 @@
       "features": ["Safe Free Swimming", "Life Jacket", "Private Rest Areas", "Open and Underground Cenotes"],
       "image": "/GrupoExtreme-web/cenote-fondo.webp",
       "logo": "/icon/logos/logo-cenote.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/cenotes-cancun/"
     },
     {
@@ -194,6 +249,7 @@
       "features": ["Gourmet Taco Tasting", "Drinks and Mixology Included", "Sunset on the Beach", "Expert Local Culinary Guide"],
       "image": "/GrupoExtreme-web/taco-fondo.webp",
       "logo": "/icon/logos/logo-taco.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
     {
@@ -203,6 +259,7 @@
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2-Hour Immersive Duration"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-horse.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     },
     {
@@ -212,6 +269,7 @@
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-mystic-waters.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/"
     },
     {
@@ -221,6 +279,7 @@
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-beef-and-drive.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/"
     },
     {
@@ -230,6 +289,7 @@
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-five-elements.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/"
     }
   ]

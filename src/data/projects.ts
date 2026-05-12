@@ -99,6 +99,7 @@ export const projectsData = [
   {
     id: 7,
     name: "Mystic Waters",
+    group: "UNIQUE ADVENTURES",
     image: "/GrupoExtreme-web/horse-fondo.webp",
     status: null,
     logo: "/icon/logos/logo-mystic-waters.svg",
@@ -115,6 +116,7 @@ export const projectsData = [
   {
     id: 8,
     name: "Beef & Drive",
+    group: "FULL ADVENTURES",
     image: "/GrupoExtreme-web/horse-fondo.webp",
     status: null,
     logo: "/icon/logos/logo-beef-and-drive.svg",
@@ -131,6 +133,7 @@ export const projectsData = [
   {
     id: 9,
     name: "5 Elemenst",
+    group: "FULL ADVENTURES",
     image: "/GrupoExtreme-web/horse-fondo.webp",
     status: null,
     logo: "/icon/logos/logo-five-elements.svg",

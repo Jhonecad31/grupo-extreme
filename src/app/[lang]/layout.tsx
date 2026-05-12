@@ -37,6 +37,7 @@ export async function generateStaticParams() {
 
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import { getDictionary } from "@/lib/get-dictionary";
 
 export default async function RootLayout(props: {
   children: React.ReactNode;
@@ -45,6 +46,7 @@ export default async function RootLayout(props: {
   const params = await props.params;
   const { lang } = params;
   const { children } = props;
+  const dict = await getDictionary(lang as "en" | "es");
 
   return (
     <html
@@ -52,11 +54,11 @@ export default async function RootLayout(props: {
       className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
+        <Header dict={dict.navigation} lang={lang} />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer lang={lang} />
+        <Footer dict={dict} lang={lang} />
       </body>
     </html>
   );

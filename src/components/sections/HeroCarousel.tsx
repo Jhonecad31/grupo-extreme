@@ -3,46 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function HeroCarousel({ lang = "es" }: { lang?: string }) {
-  const dict = lang === "es" ? {
-    explore: "Explorar Aventuras",
-    slides: [
-      {
-        title: "AVENTURA SIN LÍMITES EN CANCÚN",
-        subtitle: "Descubre la emoción de la selva maya con experiencias diseñadas para toda la familia.",
-        image: "/GrupoExtreme-web/moto-hero.webp",
-      },
-      {
-        title: "EXPLORA LO INEXPLORADO",
-        subtitle: "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
-        image: "/GrupoExtreme-web/buggy-hero.webp",
-      },
-      {
-        title: "DESAFÍA TUS SENTIDOS",
-        subtitle: "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
-        image: "/GrupoExtreme-web/motoext-hero.webp",
-      },
-    ]
-  } : {
-    explore: "Explore Adventures",
-    slides: [
-      {
-        title: "UNLIMITED ADVENTURE IN CANCUN",
-        subtitle: "Discover the thrill of the Mayan jungle with experiences designed for the whole family.",
-        image: "/GrupoExtreme-web/moto-hero.webp",
-      },
-      {
-        title: "EXPLORE THE UNEXPLORED",
-        subtitle: "ATVs, ziplines, cenotes and much more in a natural and safe environment.",
-        image: "/GrupoExtreme-web/buggy-hero.webp",
-      },
-      {
-        title: "CHALLENGE YOUR SENSES",
-        subtitle: "Drive powerful ATVs through technical trails and master the heights in the fastest zipline circuit.",
-        image: "/GrupoExtreme-web/motoext-hero.webp",
-      },
-    ]
-  };
+export default function HeroCarousel({ dict }: { dict: any }) {
 
   const [current, setCurrent] = useState(0);
 
@@ -85,9 +46,12 @@ export default function HeroCarousel({ lang = "es" }: { lang?: string }) {
         <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 animate-fade-in delay-200">
           {dict.slides[current].subtitle}
         </p>
-        <div className="flex justify-center animate-fade-in delay-500">
-          <button className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center animate-fade-in delay-500">
+          <button className="bg-white hover:bg-white/90 text-dark px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
             {dict.explore}
+          </button>
+          <button className="border border-white/30 hover:border-white text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
+            {dict.book}
           </button>
         </div>
       </div>

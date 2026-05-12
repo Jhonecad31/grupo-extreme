@@ -16,7 +16,7 @@ export default async function Home(props: {
 
     return (
         <main className="min-h-screen bg-white">
-            <HeroCarousel lang={lang} />
+            <HeroCarousel dict={dict.home.hero} />
 
             <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
@@ -37,7 +37,7 @@ export default async function Home(props: {
                             <div className="relative z-10">
                                 <h3 className="text-2xl font-bold mb-8 uppercase tracking-widest">{dict.home.features.title}</h3>
                                 <ul className="space-y-4 text-white/80">
-                                    {dict.home.features.items.map((item, i) => (
+                                    {dict.home.features.items.map((item: any, i: number) => (
                                         <li key={i} className="flex items-center space-x-3">
                                             <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                                             <span>{item}</span>
@@ -51,17 +51,17 @@ export default async function Home(props: {
                 </div>
             </section>
 
-            <StatsGrid lang={lang} />
+            <StatsGrid stats={dict.home.stats} />
 
             <section className="py-32 container mx-auto px-6">
-                <Adventures lang={lang} />
+                <Adventures dict={dict.home.projects_section} />
             </section>
 
             <section className="container mx-auto px-6 pb-32">
-                <UpcomingBrands lang={lang} />
+                <UpcomingBrands dict={dict.projects.upcoming_brands} />
             </section>
             
-            <Mentions lang={lang} />
+            <Mentions dict={dict.home.mentions} />
         </main>
     );
 }

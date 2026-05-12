@@ -1,48 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 
-export default function Mentions({ lang = "es" }: { lang?: string }) {
-  const dict = lang === "es" ? {
-    subtitle: "Reconocimientos",
-    title: "LO QUE DICEN DE NOSOTROS",
-    mentions: [
-      {
-        text: "Una experiencia inmersiva en la selva que redefine la conexión con la naturaleza y la cultura local.",
-        author: "National Geographic Explorer",
-        rating: 5
-      },
-      {
-        text: "El nivel de seguridad, las instalaciones y la atención del personal lo hacen el mejor parque de la zona.",
-        author: "TripAdvisor Traveler's Choice",
-        rating: 5
-      },
-      {
-        text: "Adrenalina pura combinada con un profundo respeto por los cenotes sagrados. Inolvidable.",
-        author: "Revista Aventurero",
-        rating: 5
-      }
-    ]
-  } : {
-    subtitle: "Recognitions",
-    title: "WHAT THEY SAY ABOUT US",
-    mentions: [
-      {
-        text: "An immersive jungle experience that redefines the connection with nature and local culture.",
-        author: "National Geographic Explorer",
-        rating: 5
-      },
-      {
-        text: "The level of safety, facilities, and staff attention make it the best park in the area.",
-        author: "TripAdvisor Traveler's Choice",
-        rating: 5
-      },
-      {
-        text: "Pure adrenaline combined with a deep respect for sacred cenotes. Unforgettable.",
-        author: "Aventurero Magazine",
-        rating: 5
-      }
-    ]
-  };
+export default function Mentions({ dict }: { dict: any }) {
 
   return (
     <section className="bg-[#f9f9f9] py-32 border-y border-gray-200">
@@ -57,7 +16,7 @@ export default function Mentions({ lang = "es" }: { lang?: string }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {dict.mentions.map((mention, i) => (
+          {dict.items.map((mention: any, i: number) => (
             <motion.div 
               key={i}
               initial={{ opacity: 0, y: 30 }}

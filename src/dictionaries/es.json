@@ -21,6 +21,27 @@
     ]
   },
   "home": {
+    "hero": {
+      "explore": "Explorar Aventuras",
+      "book": "Reservar Ahora",
+      "slides": [
+        {
+          "title": "AVENTURA SIN LÍMITES EN CANCÚN",
+          "subtitle": "Descubre la emoción de la selva maya con experiencias diseñadas para toda la familia.",
+          "image": "/GrupoExtreme-web/moto-hero.webp"
+        },
+        {
+          "title": "EXPLORA LO INEXPLORADO",
+          "subtitle": "ATVs, tirolesas, cenotes y mucho más en un entorno natural y seguro.",
+          "image": "/GrupoExtreme-web/buggy-hero.webp"
+        },
+        {
+          "title": "DESAFÍA TUS SENTIDOS",
+          "subtitle": "Conduce poderosos ATVs por senderos técnicos y domina las alturas en el circuito de tirolesas más rápido.",
+          "image": "/GrupoExtreme-web/motoext-hero.webp"
+        }
+      ]
+    },
     "history": {
       "subtitle": "Nuestra Historia",
       "title": "MÁS QUE AVENTURA, UN LEGADO EN LA SELVA.",
@@ -44,6 +65,27 @@
       "title": "LA EMOCIÓN QUE BUSCAS.",
       "view_all": "Ver Todas",
       "description": "Cada uno de nuestros desarrollos en Puerto Morelos, Ciudad de Mexico y Estado de Mexico ha sido diseñado para ofrecer una experiencia única, combinando confort, estilo y funcionalidad."
+    },
+    "mentions": {
+      "subtitle": "Reconocimientos",
+      "title": "LO QUE DICEN DE NOSOTROS",
+      "items": [
+        {
+          "text": "Una experiencia inmersiva en la selva que redefine la conexión con la naturaleza y la cultura local.",
+          "author": "National Geographic Explorer",
+          "rating": 5
+        },
+        {
+          "text": "El nivel de seguridad, las instalaciones y la atención del personal lo hacen el mejor parque de la zona.",
+          "author": "TripAdvisor Traveler's Choice",
+          "rating": 5
+        },
+        {
+          "text": "Adrenalina pura combinada con un profundo respeto por los cenotes sagrados. Inolvidable.",
+          "author": "Revista Aventurero",
+          "rating": 5
+        }
+      ]
     },
     "stats": [
       { "value": "20+", "label": "Años de Experiencia" },
@@ -157,7 +199,17 @@
     "subtitle": "Nuestros proyectos",
     "title": "EXPERIENCIAS INOLVIDABLES",
     "description": "Descubre nuestra colección curada de aventuras. Cada experiencia está diseñada con los más altos estándares de seguridad y exclusividad.",
-    "view_details": "Ver Detalles →"
+    "view_details": "Ver Detalles →",
+    "groups": {
+      "unique": "UNIQUE ADVENTURES",
+      "full": "FULL ADVENTURES"
+    },
+    "upcoming_brands": {
+      "badge": "Próximamente",
+      "title": "Nuevas Experiencias",
+      "description": "Estamos expandiendo nuestros horizontes para llevar la aventura a nuevos límites.",
+      "brands_title": "EN DESARROLLO"
+    }
   },
   "projects_data": [
     {
@@ -167,6 +219,7 @@
       "features": ["Tirolesas Extremas", "Circuito ATV 4x4", "Cenotes Vírgenes", "Comida Regional", "Equipamiento de Seguridad Profesional"],
       "image": "/GrupoExtreme-web/extreme-fondo.webp",
       "logo": "/icon/logos/logo-extreme.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
     },
     {
@@ -176,6 +229,7 @@
       "features": ["Equipo de Snorkel Completo", "Guía Certificado bilingüe", "Transporte en Lancha rápida", "Visita a 2 Arrecifes Protegidos"],
       "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
       "logo": "/icon/logos/logo-snorkel.svg",
+      "group": "unique",
       "url": "https://snorkelingadventure.com/snorkel-adventuring-details/"
     },
     {
@@ -185,6 +239,7 @@
       "features": ["Nado Libre Seguro", "Chaleco Salvavidas", "Zonas de Descanso Privadas", "Cenotes Abiertos y Subterráneos"],
       "image": "/GrupoExtreme-web/cenote-fondo.webp",
       "logo": "/icon/logos/logo-cenote.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/cenotes-cancun/"
     },
     {
@@ -194,6 +249,7 @@
       "features": ["Degustación de Tacos Gourmet", "Bebidas y Mixología Incluidas", "Atardecer en la Playa", "Experto Guía Culinario Local"],
       "image": "/GrupoExtreme-web/taco-fondo.webp",
       "logo": "/icon/logos/logo-taco.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
     {
@@ -203,6 +259,7 @@
       "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-horse.svg",
+      "group": "unique",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     },
     {
@@ -212,6 +269,7 @@
       "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-mystic-waters.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     },
     {
@@ -221,6 +279,7 @@
       "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-beef-and-drive.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     },
     {
@@ -230,6 +289,7 @@
       "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
       "image": "/GrupoExtreme-web/horse-fondo.webp",
       "logo": "/icon/logos/logo-five-elements.svg",
+      "group": "full",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
     }
   ]
