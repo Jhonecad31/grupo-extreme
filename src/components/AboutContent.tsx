@@ -168,21 +168,6 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
           </div>
         </div>
       </section>
-
-      {/* Mapa Full Width de Exploración con Múltiples Puntos */}
-      <section className="w-full h-[650px] bg-gray-100 relative grayscale hover:grayscale-0 transition-all duration-1000 group overflow-hidden border-t border-gray-100">
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d119253.94787948259!2d-87.112255!3d20.9168435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sExtreme%20Adventure%20Cancun!5e0!3m2!1ses!2smx!4v1715541800000!5m2!1ses!2smx"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="opacity-90 group-hover:opacity-100 transition-opacity duration-700"
-        ></iframe>
-      </section>
     </main>
   );
 }

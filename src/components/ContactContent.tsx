@@ -24,9 +24,9 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
   };
 
   return (
-    <div className="pt-40 pb-24 bg-[#f8f8f8]">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    <div className="pt-40 bg-[#f8f8f8] flex flex-col">
+      <div className="container mx-auto px-6 pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
           
           <div className="lg:col-span-5">
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
@@ -39,7 +39,7 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
               {dict.contact.description}
             </p>
 
-            <div className="space-y-12">
+            <div className="space-y-8">
               <div className="flex items-start space-x-6 group">
                 <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {icons.location}
@@ -141,6 +141,20 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
           </div>
         </div>
       </div>
+
+      {/* Mapa Full Width de Exploración con Múltiples Puntos */}
+      <section className="w-full h-[600px] relative border-t border-gray-200 mt-auto">
+        <iframe
+          src="https://maps.google.com/maps?q=Extreme%20Adventure%20Cancun%20Puerto%20Morelos&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full h-full"
+        ></iframe>
+      </section>
     </div>
   );
 }

@@ -37,8 +37,6 @@ export default function Header() {
     };
   }, [isMenuOpen]);
 
-  // Esto idealmente vendría de un diccionario pasado por props o context, 
-  // pero para simplificar en el Header client-side lo definimos basándonos en lang
   const navDict = lang === "es" ? {
     home: "Inicio",
     projects: "Proyectos",
@@ -60,11 +58,7 @@ export default function Header() {
 
   const toggleLanguage = () => {
     const newLang = lang === "es" ? "en" : "es";
-    
-    // Guardamos la preferencia en una cookie por 1 año
     document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000`;
-    
-    // Recargamos la página para que el middleware aplique el cambio
     window.location.reload();
   };
 
