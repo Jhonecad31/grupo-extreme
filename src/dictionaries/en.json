@@ -23,7 +23,6 @@
   "home": {
     "hero": {
       "explore": "Explore Adventures",
-      "book": "Book Now",
       "slides": [
         {
           "title": "UNLIMITED ADVENTURE IN CANCUN",
@@ -171,7 +170,7 @@
       "office_title": "Headquarters",
       "office_address": "77500 Benito Juarez, Av. Huayacan plaza aura 3er piso, Cancun, Quintana Roo, Mexico",
       "contact_title": "Direct Contact",
-      "contact_details": "reservas@grupoextreme.com\n+52 (998) 123 4567",
+      "contact_details": "reservations@grupoextreme.com\n+52 (998) 123 4567",
       "hours_title": "Opening Hours",
       "hours_details": "Monday to Sunday\n8:00 AM - 6:00 PM"
     },

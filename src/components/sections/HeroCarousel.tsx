@@ -33,7 +33,6 @@ export default function HeroCarousel({ dict }: { dict: any }) {
           <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
-
       <div className="relative h-full flex flex-col justify-center items-center text-center px-6">
         <div className="overflow-hidden mb-4">
           <span className="block text-white font-bold tracking-[0.3em] uppercase text-sm animate-slide-up">
@@ -46,12 +45,9 @@ export default function HeroCarousel({ dict }: { dict: any }) {
         <p className="text-white/80 text-lg md:text-xl max-w-2xl mb-12 animate-fade-in delay-200">
           {dict.slides[current].subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center animate-fade-in delay-500">
-          <button className="bg-white hover:bg-white/90 text-dark px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
+        <div className="flex justify-center animate-fade-in delay-500">
+          <button className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
             {dict.explore}
-          </button>
-          <button className="border border-white/30 hover:border-white text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
-            {dict.book}
           </button>
         </div>
       </div>

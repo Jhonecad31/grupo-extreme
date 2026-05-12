@@ -3,8 +3,6 @@ import StatsGrid from "@/components/StatsGrid";
 import Adventures from "@/components/sections/Adventures";
 import Mentions from "@/components/sections/Mentions";
 import UpcomingBrands from "@/components/UpcomingBrands";
-import Link from "next/link";
-import ContactContent from "@/components/ContactContent";
 
 import { getDictionary } from "@/lib/get-dictionary";
 

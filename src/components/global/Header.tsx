@@ -60,10 +60,10 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
         <Link href="/" className="flex items-center space-x-3 group relative z-[70]">
           <div className="relative w-28 h-12 md:w-32 md:h-14 transition-transform duration-300 group-hover:scale-105">
             <Image
-              src={logo}
+              src={isMenuOpen ? "/icon/logos/logo-extreme-negativo.svg" : logo}
               alt="Grupo Extreme Logo"
               fill
-              className={`object-contain transition-all ${isMenuOpen ? "brightness-0 invert" : ""}`}
+              className="object-contain transition-all"
               priority
             />
           </div>

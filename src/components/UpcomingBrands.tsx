@@ -45,11 +45,6 @@ export default function UpcomingBrands({ dict }: { dict: any }) {
                   />
                 </div>
 
-                <div className="mt-12">
-                   <h4 className="text-dark/20 text-xs uppercase tracking-[0.5em] font-black group-hover:text-dark transition-colors duration-500">
-                     {brand.name}
-                   </h4>
-                </div>
               </div>
             )
           ))}

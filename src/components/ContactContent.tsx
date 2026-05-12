@@ -142,10 +142,10 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
         </div>
       </div>
 
-      {/* Mapa Full Width de Exploración con Múltiples Puntos */}
+      {/* Mapa con las 3 Ubicaciones Principales */}
       <section className="w-full h-[600px] relative border-t border-gray-200 mt-auto">
         <iframe
-          src="https://maps.google.com/maps?q=Extreme%20Adventure%20Cancun%20Puerto%20Morelos&t=&z=11&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Quintana+Roo+Puerto+Morelos+-+Leona+Vicario+KM+19.1,+77580+Puerto+Morelos,+Q.R.+OR+Snorkel+Adventure+Cancun+OR+Beach+Taco+Tour+Puerto+Morelos&t=&z=10&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
