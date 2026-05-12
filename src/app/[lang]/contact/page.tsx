@@ -11,8 +11,6 @@ export default async function ContactoPage(props: {
       <div className="pt-32 pb-24">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
-            {/* Información de Contacto */}
             <div>
               <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
                 {dict.contact.subtitle}
@@ -39,8 +37,6 @@ export default async function ContactoPage(props: {
                 </div>
               </div>
             </div>
-
-            {/* Formulario Premium */}
             <div className="bg-dark p-10 md:p-14 relative overflow-hidden rounded-sm shadow-2xl">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl pointer-events-none" />
 

@@ -36,16 +36,12 @@ export default async function ProyectosPage(props: {
                 className="w-full h-full block group/link"
               >
                 <div className="flex flex-col group relative h-full animate-fade-in select-none transition-transform duration-300 hover:-translate-y-2">
-                  {/* Fondo oscuro con el corte diagonal en la esquina superior derecha */}
                   <div
                     className="absolute inset-0 bg-black duration-500"
                     style={{ clipPath: "polygon(0 0, 55% 0, 100% 25%, 100% 100%, 0 100%)" }}
                   />
-                  {/* Contenido (Imagen y Textos) superpuesto al fondo */}
                   <div className="relative z-10 p-5 md:p-6 pb-8 flex flex-col h-full">
-                    {/* Contenedor de la imagen sin overflow-hidden en el padre para que la esquina sobresalga del fondo */}
                     <div className="relative aspect-square w-full mb-6 shadow-xl bg-black">
-                      {/* Imagen de fondo */}
                       <Image
                         src={project.image}
                         alt={project.name}
@@ -55,7 +51,6 @@ export default async function ProyectosPage(props: {
                         className="object-cover  h-full animate-fade-in select-none cursor-pointer grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100"
                       />
 
-                      {/* Logo superpuesto */}
                       {project.logo && (
                         <div className="absolute inset-0 flex items-center justify-center p-8 pointer-events-none z-10">
                           <Image
@@ -69,7 +64,6 @@ export default async function ProyectosPage(props: {
                         </div>
                       )}
 
-                      {/* Texto de Status (Ej: PRÓXIMAMENTE) */}
                       {project.status && (
                         <div className="absolute inset-0 flex items-center justify-center p-4 pointer-events-none z-10">
                           <span className="text-white text-2xl md:text-3xl font-bold tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] text-center">

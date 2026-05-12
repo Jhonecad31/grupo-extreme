@@ -20,8 +20,6 @@ export default async function InfoProjectsPage({
   return (
     <main className="min-h-screen bg-white">
       <Header />
-
-      {/* Hero Section */}
       <section className="relative w-full h-[55vh] bg-black flex items-center justify-center">
         <img
           src={project.image}
@@ -29,8 +27,6 @@ export default async function InfoProjectsPage({
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-
-        {/* Botón de volver */}
         <div className="absolute top-32 left-6 md:left-12 z-20">
           <Link href="/projects" className="text-white/80 hover:text-white transition-all flex items-center uppercase tracking-[0.2em] text-xs font-bold group">
             <span className="bg-white/10 group-hover:bg-primary p-2 rounded-full mr-3 transition-colors backdrop-blur-sm border border-white/20 group-hover:border-primary">
@@ -41,8 +37,6 @@ export default async function InfoProjectsPage({
             Proyectos
           </Link>
         </div>
-
-        {/* Contenido Centrado */}
         <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center pt-16">
           {project.logo && (
             <img
@@ -65,8 +59,6 @@ export default async function InfoProjectsPage({
           </div>
         </div>
       </section>
-
-      {/* Content Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -103,8 +95,6 @@ export default async function InfoProjectsPage({
           </div>
         </div>
       </section>
-
-      {/* Gallery Section */}
       {project.gallery && project.gallery.length > 0 && (
         <section className="py-24 bg-gray-50 border-t border-gray-200">
           <div className="container mx-auto px-6">
@@ -132,8 +122,6 @@ export default async function InfoProjectsPage({
           </div>
         </section>
       )}
-
-      {/* CTA Section */}
       <section className="bg-dark py-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/2" />
         <div className="container mx-auto px-6 relative z-10 text-center">

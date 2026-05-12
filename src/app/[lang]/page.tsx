@@ -15,10 +15,8 @@ export default async function Home(props: {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section */}
       <HeroCarousel lang={lang} />
 
-      {/* About Section */}
       <section className="py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -52,23 +50,18 @@ export default async function Home(props: {
         </div>
       </section>
 
-      {/* Stats Section */}
       <StatsGrid lang={lang} />
 
-      {/* Adventures Section */}
       <section className="py-32 container mx-auto px-6">
         <Adventures lang={lang} />
       </section>
 
-      {/* Upcoming Brands Section */}
       <section className="container mx-auto px-6 pb-32">
         <UpcomingBrands lang={lang} />
       </section>
 
-      {/* Mentions / Testimonials Section */}
       <Mentions lang={lang} />
 
-      {/* CTA Section */}
       <section className="bg-dark py-32 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h2 className="text-4xl md:text-7xl text-white font-display font-black mb-12 max-w-4xl mx-auto leading-none">
