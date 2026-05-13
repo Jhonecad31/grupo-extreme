@@ -160,6 +160,27 @@
           "text": "Inmersión en las tradiciones con relatos mayas, gastronomía auténtica y degustación de tequila con herencia regional."
         }
       ]
+    },
+    "awards": {
+      "subtitle": "Reconocimientos",
+      "title": "EXCELENCIA GLOBAL",
+      "items": [
+        {
+          "title": "Destacados por National Geographic Traveller",
+          "description": "Destacados como una de las mejores experiencias de aventura en Cancún.",
+          "image": "/GrupoExtreme-web/nat-geo-logo.webp"
+        },
+        {
+          "title": "Ganador de World Travel Awards: 2022-2025",
+          "description": "Reconocido como el mejor operador de tours de aventura en Cancún.",
+          "image": "/GrupoExtreme-web/world-travel-awards-logo.webp"
+        },
+        {
+          "title": "TripAdvisor Best of the Best: 2019-2024-2025",
+          "description": "Reconocido como los mejores tours de aventura en Cancún y la Riviera Maya.",
+          "image": "/GrupoExtreme-web/tripadvisor-logo.webp"
+        }
+      ]
     }
   },
   "contact": {

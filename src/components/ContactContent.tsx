@@ -39,34 +39,40 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
               {dict.contact.description}
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-start space-x-6 group">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  {icons.location}
+            <div className="space-y-6 md:space-y-8">
+              <div className="flex items-start space-x-4 md:space-x-6 group">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+                  <div className="scale-90 md:scale-100">
+                    {icons.location}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-dark mb-2">{dict.contact.info.office_title}</h4>
-                  <p className="text-gray-500 leading-relaxed">{dict.contact.info.office_address}</p>
+                  <h4 className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-dark mb-1 md:mb-2">{dict.contact.info.office_title}</h4>
+                  <p className="text-gray-500 text-sm md:text-base leading-relaxed">{dict.contact.info.office_address}</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-6 group">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  {icons.contact}
+              <div className="flex items-start space-x-4 md:space-x-6 group">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+                  <div className="scale-90 md:scale-100">
+                    {icons.contact}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-dark mb-2">{dict.contact.info.contact_title}</h4>
-                  <p className="text-gray-500 leading-relaxed whitespace-pre-line">{dict.contact.info.contact_details}</p>
+                  <h4 className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-dark mb-1 md:mb-2">{dict.contact.info.contact_title}</h4>
+                  <p className="text-gray-500 text-sm md:text-base leading-relaxed whitespace-pre-line">{dict.contact.info.contact_details}</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-6 group">
-                <div className="w-12 h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  {icons.hours}
+              <div className="flex items-start space-x-4 md:space-x-6 group">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-xl shadow-sm border border-gray-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
+                  <div className="scale-90 md:scale-100">
+                    {icons.hours}
+                  </div>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-dark mb-2">{dict.contact.info.hours_title}</h4>
-                  <p className="text-gray-500 leading-relaxed whitespace-pre-line">{dict.contact.info.hours_details}</p>
+                  <h4 className="text-[10px] md:text-sm font-bold uppercase tracking-widest text-dark mb-1 md:mb-2">{dict.contact.info.hours_title}</h4>
+                  <p className="text-gray-500 text-sm md:text-base leading-relaxed whitespace-pre-line">{dict.contact.info.hours_details}</p>
                 </div>
               </div>
             </div>
@@ -145,7 +151,7 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
       {/* Mapa con las 3 Ubicaciones Principales */}
       <section className="w-full h-[600px] relative border-t border-gray-200 mt-auto">
         <iframe
-          src="https://maps.google.com/maps?q=Quintana+Roo+Puerto+Morelos+-+Leona+Vicario+KM+19.1,+77580+Puerto+Morelos,+Q.R.+OR+Snorkel+Adventure+Cancun+OR+Beach+Taco+Tour+Puerto+Morelos&t=&z=10&ie=UTF8&iwloc=&output=embed"
+          src="https://maps.google.com/maps?q=Extreme+Adventure+Cancun+OR+Snorkel+Adventure+Cancun+OR+Beach+Taco+Tour+Puerto+Morelos&t=&z=10&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}

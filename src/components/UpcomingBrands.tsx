@@ -10,14 +10,13 @@ export default function UpcomingBrands({ dict }: { dict: any }) {
     <div className="py-24 border-t border-gray-100">
       <div className="container mx-auto px-6 text-center">
         <div className="max-w-3xl mx-auto mb-20">
-          <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">
+          <span className="text-primary font-bold tracking-[0.4em] uppercase text-xs mb-4 block">
             {dict.brands_title}
           </span>
-          <h2 className="text-4xl md:text-5xl text-dark font-display font-black mb-6">
+          <h2 className="text-4xl md:text-6xl text-dark font-display font-black mb-10 uppercase leading-tight">
             {dict.title}
           </h2>
-          <div className="w-12 h-1 bg-primary mx-auto mb-8" />
-          <p className="text-gray-500 text-lg font-light leading-relaxed">
+          <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto">
             {dict.description}
           </p>
         </div>

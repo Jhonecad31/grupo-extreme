@@ -8,12 +8,12 @@ import Image from "next/image";
 export default function Header({ dict, lang }: { dict: any; lang: string }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const pathname = usePathname();
   const router = useRouter();
 
-  // Solo el Home tiene un hero oscuro de fondo (el carrusel).
-  const isDarkHeroPage = pathname === `/${lang}` || pathname === `/${lang}/`;
+  // Solo el Home y el About tienen un hero oscuro de fondo (el carrusel o imagen inmersiva).
+  const isDarkHeroPage = pathname === `/${lang}` || pathname === `/${lang}/` || pathname === "/" || pathname.includes('/about');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,7 +60,7 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
         <Link href="/" className="flex items-center space-x-3 group relative z-[70]">
           <div className="relative w-28 h-12 md:w-32 md:h-14 transition-transform duration-300 group-hover:scale-105">
             <Image
-              src={isMenuOpen ? "/icon/logos/logo-extreme-negativo.svg" : logo}
+              src={isMenuOpen || (isDarkHeroPage && !isScrolled) ? "/icon/logos/logo-extreme-negativo.svg" : logo}
               alt="Grupo Extreme Logo"
               fill
               className="object-contain transition-all"
