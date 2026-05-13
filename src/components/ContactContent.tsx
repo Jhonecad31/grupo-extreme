@@ -1,4 +1,5 @@
 import { getDictionary } from "@/lib/get-dictionary";
+import InteractiveMap from "@/components/sections/Maps";
 
 export default async function ContactContent({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -27,7 +28,7 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
     <div className="pt-40 bg-[#f8f8f8] flex flex-col">
       <div className="container mx-auto px-6 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
-          
+
           <div className="lg:col-span-5">
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
               {dict.contact.subtitle}
@@ -81,33 +82,33 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
           <div className="lg:col-span-7">
             <div className="bg-white p-10 md:p-16 rounded-3xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-              
+
               <form className="relative z-10 space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-black block ml-1">{dict.contact.form.name}</label>
-                    <input 
-                      type="text" 
-                      className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300" 
-                      placeholder={dict.contact.form.placeholder_name} 
+                    <input
+                      type="text"
+                      className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300"
+                      placeholder={dict.contact.form.placeholder_name}
                     />
                   </div>
                   <div className="space-y-3">
                     <label className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-black block ml-1">{dict.contact.form.phone}</label>
-                    <input 
-                      type="tel" 
-                      className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300" 
-                      placeholder={dict.contact.form.placeholder_phone} 
+                    <input
+                      type="tel"
+                      className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300"
+                      placeholder={dict.contact.form.placeholder_phone}
                     />
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-black block ml-1">{dict.contact.form.email}</label>
-                  <input 
-                    type="email" 
-                    className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300" 
-                    placeholder={dict.contact.form.placeholder_email} 
+                  <input
+                    type="email"
+                    className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl placeholder:text-gray-300"
+                    placeholder={dict.contact.form.placeholder_email}
                   />
                 </div>
 
@@ -129,15 +130,15 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
 
                 <div className="space-y-3">
                   <label className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-black block ml-1">{dict.contact.form.message}</label>
-                  <textarea 
-                    rows={4} 
-                    className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl resize-none placeholder:text-gray-300" 
+                  <textarea
+                    rows={4}
+                    className="w-full bg-gray-50/50 border border-gray-100 text-dark px-6 py-4 focus:outline-none focus:border-primary/50 focus:bg-white transition-all rounded-2xl resize-none placeholder:text-gray-300"
                     placeholder={dict.contact.form.placeholder_message}
                   ></textarea>
                 </div>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="w-full bg-dark text-white font-black uppercase tracking-[0.2em] md:tracking-[0.3em] py-4 md:py-6 mt-2 md:mt-4 hover:bg-primary hover:text-white transition-all duration-500 rounded-2xl shadow-xl shadow-dark/10 hover:shadow-primary/20 hover:-translate-y-1"
                 >
                   {dict.contact.form.submit}
@@ -147,20 +148,7 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
           </div>
         </div>
       </div>
-
-      {/* Mapa con las 3 Ubicaciones Principales */}
-      <section className="w-full h-[600px] relative border-t border-gray-200 mt-auto">
-        <iframe
-          src="https://maps.google.com/maps?q=Extreme+Adventure+Cancun+OR+Snorkel+Adventure+Cancun+OR+Beach+Taco+Tour+Puerto+Morelos&t=&z=10&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="w-full h-full"
-        ></iframe>
-      </section>
+      <InteractiveMap />
     </div>
   );
 }
