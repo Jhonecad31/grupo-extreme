@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Slide {
   image: string;
@@ -14,7 +15,7 @@ interface HeroDictionary {
   explore: string;
 }
 
-export default function HeroCarousel({ dict }: { dict: HeroDictionary }) {
+export default function HeroCarousel({ dict, lang }: { dict: HeroDictionary; lang: string }) {
 
   const [current, setCurrent] = useState(0);
 
@@ -57,9 +58,12 @@ export default function HeroCarousel({ dict }: { dict: HeroDictionary }) {
           {dict.slides[current].subtitle}
         </p>
         <div className="flex justify-center animate-fade-in delay-500">
-          <button className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300">
+          <Link 
+            href={`/${lang}/projects`}
+            className="bg-white hover:bg-white/90 text-dark px-12 py-4 rounded-sm font-bold uppercase tracking-widest transition-all duration-300"
+          >
             {dict.explore}
-          </button>
+          </Link>
         </div>
       </div>
 

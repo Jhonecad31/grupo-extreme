@@ -14,7 +14,7 @@ export default async function Home(props: {
  
     return (
         <main className="min-h-screen bg-white">
-            <HeroCarousel dict={dict.home.hero} />
+            <HeroCarousel dict={dict.home.hero} lang={lang} />
  
             <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
