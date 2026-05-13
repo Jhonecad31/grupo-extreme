@@ -66,7 +66,7 @@ export default function HeroCarousel({ dict, lang }: { dict: HeroDictionary; lan
           </Link>
         </div>
       </div>
-
+ 
       {/* Progress indicators */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex space-x-3">
         {Array.from({ length: dict.slides.length }).map((_, i) => (
