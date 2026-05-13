@@ -1,7 +1,10 @@
 import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+import Footer from "@/components/global/Footer";
 
-export default function ContactoPage() {
+import { getDictionary } from "@/lib/get-dictionary";
+ 
+export default async function ContactoPage() {
+  const dict = await getDictionary("es");
   return (
     <main className="min-h-screen bg-white">
       <Header />
@@ -83,7 +86,7 @@ export default function ContactoPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict} lang="es" />
     </main>
   );
 }

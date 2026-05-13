@@ -1,8 +1,11 @@
 import Header from "@/components/shared/Header";
-import Footer from "@/components/shared/Footer";
+import Footer from "@/components/global/Footer";
 import ProjectCard from "@/components/ProjectCard";
 
-export default function ProyectosPage() {
+import { getDictionary } from "@/lib/get-dictionary";
+
+export default async function ProyectosPage() {
+  const dict = await getDictionary("es");
   const projects = [
     {
       title: "Circuito Selva Maya",
@@ -60,7 +63,7 @@ export default function ProyectosPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict} lang="es" />
     </main>
   );
 }
