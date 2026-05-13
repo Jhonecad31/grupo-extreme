@@ -3,18 +3,19 @@ import StatsGrid from "@/components/StatsGrid";
 import Adventures from "@/components/sections/Adventures";
 import Mentions from "@/components/sections/Mentions";
 import UpcomingBrands from "@/components/UpcomingBrands";
+import ExtremePartners from "@/components/sections/ExtremePartners";
 import { getDictionary } from "@/lib/get-dictionary";
-
+ 
 export default async function Home(props: {
     params: Promise<{ lang: string }>;
 }) {
     const { lang } = await props.params;
     const dict = await getDictionary(lang as "en" | "es");
-
+ 
     return (
         <main className="min-h-screen bg-white">
             <HeroCarousel dict={dict.home.hero} />
-
+ 
             <section className="py-32 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
@@ -47,16 +48,18 @@ export default async function Home(props: {
                     </div>
                 </div>
             </section>
-
+ 
             <StatsGrid stats={dict.home.stats} />
-
+ 
             <section className="py-32 container mx-auto px-6">
                 <Adventures dict={dict.home.projects_section} />
             </section>
-
-            <section className="container mx-auto px-6 pb-32">
+ 
+            <section className="container mx-auto px-6 pb-12">
                 <UpcomingBrands dict={dict.projects.upcoming_brands} />
             </section>
+
+            <ExtremePartners dict={dict.home.extreme_partners} />
             
             <Mentions dict={dict.home.mentions} />
         </main>

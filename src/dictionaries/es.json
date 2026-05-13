@@ -59,6 +59,26 @@
         "Cata de tequila artesanal"
       ]
     },
+    "extreme_partners": {
+      "subtitle": "Extreme Partners",
+      "title": "NUESTRO PROGRAMA DE AFILIADOS",
+      "description": "Extreme Partners es nuestro programa oficial de afiliación, diseñado para agencias de viaje, hoteles, influencers y empresas turísticas que buscan ofrecer experiencias de aventura de primer nivel.",
+      "benefits_title": "Beneficios de unirse a Extreme Partners",
+      "benefits_desc": "Actualmente colaboramos con socios en México, Estados Unidos, Canadá, Europa y Sudamérica, posicionando a Extreme Adventuring Cancun como uno de los productos de aventura más vendidos de la región.",
+      "contact_desc": "Para convertirse en afiliado, las agencias pueden contactar a nuestro departamento comercial o solicitar material de incorporación.",
+      "items": [
+        "Altas comisiones",
+        "Soporte dedicado de reservaciones",
+        "Sistema de confirmación instantánea",
+        "Acceso prioritario a disponibilidad",
+        "Materiales de marketing con co-branding",
+        "Capacitación para equipos de ventas",
+        "Transporte y operación confiable"
+      ],
+      "app_badge": "App Oficial para Socios",
+      "app_title": "Gestiona tus ventas en tiempo real",
+      "app_desc": "Nuestra plataforma exclusiva permite a los socios generar pagos, gestionar reservas y monitorear sus ganancias desde cualquier dispositivo."
+    },
     "projects_section": {
       "subtitle": "Nuestros proyectos",
       "title": "LA EMOCIÓN QUE BUSCAS.",

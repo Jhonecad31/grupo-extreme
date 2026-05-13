@@ -59,6 +59,26 @@
         "Artisanal tequila tasting"
       ]
     },
+    "extreme_partners": {
+      "subtitle": "Extreme Partners",
+      "title": "OUR AFFILIATE PROGRAM",
+      "description": "Extreme Partners is our official affiliate program, designed for travel agencies, hotels, influencers, and tourism companies looking to offer top-level adventure experiences.",
+      "benefits_title": "Benefits of joining Extreme Partners",
+      "benefits_desc": "Currently we collaborate with partners in Mexico, USA, Canada, Europe and South America, positioning Extreme Adventuring Cancun as one of the best-selling adventure products in the region.",
+      "contact_desc": "To become an affiliate, agencies can contact our commercial department or request onboarding material.",
+      "items": [
+        "High commissions",
+        "Dedicated reservation support",
+        "Instant confirmation system",
+        "Priority access to availability",
+        "Marketing materials with co-branding",
+        "Training for sales teams",
+        "Reliable transport and operation"
+      ],
+      "app_badge": "Official Partner App",
+      "app_title": "Manage your sales in real time",
+      "app_desc": "Our exclusive platform allows partners to generate payments, manage bookings and monitor their earnings from any device."
+    },
     "projects_section": {
       "subtitle": "Our Projects",
       "title": "THE THRILL YOU'RE LOOKING FOR.",
