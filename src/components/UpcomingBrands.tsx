@@ -21,12 +21,12 @@ export default function UpcomingBrands({ dict }: { dict: any }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
           {upcomingBrands.map((brand, i) => (
             brand.logo && (
               <div 
                 key={i} 
-                className="group relative bg-[#fcfcfc] border border-gray-100 rounded-[2.5rem] p-16 md:p-24 transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] hover:border-gray-200"
+                className="w-full md:w-[calc(50%-1.5rem)] group relative bg-[#fcfcfc] border border-gray-100 rounded-[2.5rem] p-16 md:p-24 transition-all duration-500 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.05)] hover:border-gray-200"
               >
                 <div className="absolute top-8 left-1/2 -translate-x-1/2">
                    <span className="text-[10px] text-gray-300 uppercase tracking-[0.2em] font-bold group-hover:text-primary transition-colors">

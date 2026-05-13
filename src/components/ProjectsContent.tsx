@@ -40,14 +40,14 @@ export default async function ProyectosPage(props: {
                                     </h2>
                                     <div className="h-px bg-gray-200 flex-grow" />
                                 </div>
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div className="flex flex-wrap justify-center gap-8">
                                     {filteredProjects.map((project: any) => (
                                         <a
                                             href={project.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             key={project.id}
-                                            className="w-full h-full block group/link"
+                                            className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] block group/link"
                                         >
                                             <div className="flex flex-col group relative h-full animate-fade-in select-none transition-transform duration-300 hover:-translate-y-2">
                                                 <div

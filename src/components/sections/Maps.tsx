@@ -54,6 +54,7 @@ const locations = [
       </svg>
     )
   }
+  
 ];
 
 export default function InteractiveMap() {
