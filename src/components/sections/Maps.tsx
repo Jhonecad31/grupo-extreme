@@ -4,6 +4,16 @@ import React, { useState } from 'react';
 import Map, { Marker, Popup, NavigationControl } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
+interface Location {
+  id: number;
+  name: string;
+  coords: { lng: number; lat: number };
+  address: string;
+  googleMapsUrl: string;
+  icon: React.ReactNode;
+}
+
+
 const locations = [
   {
     id: 1,
@@ -47,7 +57,8 @@ const locations = [
 ];
 
 export default function InteractiveMap() {
-  const [selectedPlace, setSelectedPlace] = useState(null);
+  const [selectedPlace, setSelectedPlace] = useState<Location | null>(null);
+
   const API_KEY = "f7d260a6-b7fc-4b60-84ee-e5dc4d2a2965";
 
   return (
@@ -112,8 +123,6 @@ export default function InteractiveMap() {
           </React.Fragment>
         ))}
       </Map>
-
-      {/* Estilos para el Popup de MapLibre para que combine con el diseño */}
       <style jsx global>{`
         .maplibregl-popup-content {
           padding: 0 !important;
