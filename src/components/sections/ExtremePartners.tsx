@@ -83,64 +83,115 @@ export default function ExtremePartners({ dict }: { dict: any }) {
               {/* Phone Container */}
               <div className="relative mx-auto w-full max-w-[320px] md:max-w-[380px] aspect-[9/18.5] bg-dark rounded-[3rem] border-[12px] border-dark shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden">
                 {/* App UI Simulation */}
-                <div className="h-full w-full bg-dark flex flex-col p-6">
+                <div className="h-full w-full bg-dark flex flex-col p-4">
                   {/* Status Bar */}
-                  <div className="flex justify-between items-center mb-10 text-[10px] text-white/40 font-bold tracking-widest">
+                  <div className="flex justify-between items-center mb-6 text-[10px] text-white/40 font-bold tracking-widest px-2">
                     <span>10:29</span>
-                    <div className="flex space-x-1">
-                      <div className="w-3 h-3 rounded-full border border-white/20" />
-                      <div className="w-3 h-3 rounded-full border border-white/20" />
+                    <div className="flex space-x-1.5 items-center">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21l-12-18h24z"/></svg>
+                      <div className="w-5 h-2.5 rounded-sm border border-white/20 relative">
+                        <div className="absolute left-0 top-0 h-full bg-white/40 w-3/4" />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Header */}
-                  <div className="flex flex-col items-center mb-12">
-                    <div className="relative w-32 h-12 mb-2">
-                      <Image
-                        src="/icon/logos/logo-extreme-partners.svg"
-                        alt="Logo"
-                        fill
-                        className="object-contain brightness-0 invert"
-                      />
+                  {/* Profile Header */}
+                  <div className="flex justify-between items-center mb-6 px-2">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 rounded-full bg-gray-600 border border-white/10 overflow-hidden relative">
+                         <div className="absolute inset-0 bg-gradient-to-br from-gray-400 to-gray-600" />
+                      </div>
+                      <span className="text-[10px] text-white font-bold uppercase tracking-widest">EXTREME PARTNERS</span>
                     </div>
-                    <span className="text-[10px] text-white/60 uppercase tracking-[0.3em] font-bold">
-                      {dict.subtitle}
-                    </span>
+                    <svg className="w-4 h-4 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
 
-                  {/* Earnings Grid */}
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="bg-white/5 p-4 rounded-2xl border border-white/10">
-                      <span className="text-[9px] text-white/40 uppercase font-bold block mb-1">Hoy</span>
-                      <span className="text-xl font-bold text-white">$ 0.00</span>
-                    </div>
-                    <div className="bg-white/5 p-4 rounded-2xl border border-white/10">
-                      <span className="text-[9px] text-white/40 uppercase font-bold block mb-1">Mes</span>
-                      <span className="text-xl font-bold text-white">$ 1,250.00</span>
-                    </div>
-                  </div>
-
-                  {/* Quick Actions */}
-                  <div className="grid grid-cols-2 gap-4 mb-8 h-full">
-                    <div className="bg-primary/20 p-5 rounded-2xl border border-primary/30 flex flex-col justify-between group">
-                      <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                      </svg>
-                      <span className="text-[10px] text-white font-bold uppercase tracking-widest">Instagram</span>
-                    </div>
-                    <div className="bg-white/5 p-5 rounded-2xl border border-white/10 flex flex-col justify-between">
-                      <svg className="w-5 h-5 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <span className="text-[10px] text-white font-bold uppercase tracking-widest">Reservar</span>
+                  {/* Earnings Card */}
+                  <div className="bg-[#151515] p-4 rounded-2xl border border-white/5 mb-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <span className="text-[9px] text-white/40 uppercase font-bold block mb-1">Ganancias (USD)</span>
+                        <div className="flex items-baseline space-x-1">
+                          <span className="text-white text-xs font-bold">$</span>
+                          <span className="text-white text-2xl font-black">0</span>
+                          <span className="text-white/40 text-[10px] font-bold">00</span>
+                        </div>
+                        <span className="text-[8px] text-white/20 uppercase font-bold mt-1 block">Hoy</span>
+                      </div>
+                      <div className="text-right">
+                        <span className="text-[9px] text-white/40 uppercase font-bold block mb-1">Noviembre 2025</span>
+                        <div className="flex items-baseline justify-end space-x-1">
+                          <span className="text-white text-xs font-bold">$</span>
+                          <span className="text-white text-2xl font-black">0</span>
+                          <span className="text-white/40 text-[10px] font-bold">00</span>
+                        </div>
+                        <svg className="w-3 h-3 text-white/20 ml-auto mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                      </div>
                     </div>
                   </div>
 
-                  {/* App Description Overlay */}
-                  <div className="mt-auto pt-6 border-t border-white/10">
-                    <span className="text-[8px] text-primary font-bold uppercase tracking-widest block mb-1">{dict.app_badge}</span>
-                    <p className="text-[10px] text-white font-bold mb-1 leading-tight">{dict.app_title}</p>
-                    <p className="text-[9px] text-white/40 leading-relaxed">{dict.app_desc}</p>
+                  {/* Action Grid */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {[
+                      { title: "Promocionar en Instagram", color: "bg-[#3498db]", icon: "M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" },
+                      { title: "Reservar", color: "bg-[#3498db]", icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5" },
+                      { title: "QR", color: "bg-[#3498db]", icon: "M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" },
+                      { title: "Enlace de pago", color: "bg-[#3498db]", icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" }
+                    ].map((item, i) => (
+                      <div key={i} className={`${item.color} p-3 rounded-2xl flex flex-col justify-between aspect-square relative overflow-hidden group cursor-pointer`}>
+                        <svg className="w-5 h-5 text-dark/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={item.icon} />
+                        </svg>
+                        <svg className="absolute top-3 right-3 w-3 h-3 text-dark/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        <span className="text-[10px] text-dark font-black leading-tight uppercase pr-4">{item.title}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Recent Bookings */}
+                  <div className="flex-grow">
+                    <div className="flex justify-between items-center mb-4 px-2">
+                      <span className="text-[10px] text-white font-bold uppercase tracking-widest">Mis reservas</span>
+                      <div className="flex space-x-1">
+                        <div className="w-1 h-1 bg-white/20 rounded-full" />
+                        <div className="w-1 h-1 bg-white/20 rounded-full" />
+                      </div>
+                    </div>
+                    
+                    {/* Filter Tabs */}
+                    <div className="flex space-x-2 mb-6 px-1">
+                      <div className="bg-white/10 px-3 py-1.5 rounded-lg text-[8px] text-white/60 font-bold uppercase tracking-tighter">Para hoy</div>
+                      <div className="bg-white/20 px-3 py-1.5 rounded-lg text-[8px] text-white font-bold uppercase tracking-tighter">Más recientes</div>
+                    </div>
+
+                    {/* List */}
+                    <div className="space-y-4 px-1">
+                      {[
+                        { date: "07 nov", time: "10:00", name: "Extreme Adventuring", price: "359.01" },
+                        { date: "26 oct", time: "10:00", name: "Extreme Horseback Riding", price: "219.81" },
+                        { date: "26 oct", time: "10:00", name: "Cenote Adventuring", price: "43.90" }
+                      ].map((res, i) => (
+                        <div key={i} className="flex justify-between items-center">
+                          <div className="flex items-center space-x-3">
+                            <div className="text-center min-w-[32px]">
+                              <div className="text-[8px] text-white font-bold uppercase">{res.date}</div>
+                              <div className="text-[7px] text-white/40">{res.time}</div>
+                            </div>
+                            <div>
+                              <div className="text-[9px] text-white font-bold leading-none mb-0.5">{res.name}</div>
+                              <div className="text-[7px] text-white/30 uppercase tracking-tighter">ATV, Zipline, Cenote...</div>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-[9px] text-white font-bold">${res.price}</div>
+                            <div className="text-[7px] text-primary/80 font-bold">$0.00</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
