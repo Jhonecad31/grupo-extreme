@@ -35,17 +35,6 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
     };
   }, [isMenuOpen]);
 
-  // Persistir el estado del menú al cambiar de idioma
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("menu") === "open") {
-      setIsMenuOpen(true);
-      // Limpiar el parámetro de la URL sin recargar
-      const newRelativePathQuery = window.location.pathname;
-      window.history.replaceState(null, "", newRelativePathQuery);
-    }
-  }, []);
-
   const navLinks = [
     { name: dict.home, href: `/${lang}` },
     { name: dict.projects, href: `/${lang}/projects` },
@@ -59,10 +48,9 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
     // Set cookie for Next.js i18n middleware
     document.cookie = `NEXT_LOCALE=${newLang}; path=/; max-age=31536000`;
     
-    // Recargar la página actual con un parámetro para reabrir el menú
-    const url = new URL(window.location.href);
-    url.searchParams.set("menu", "open");
-    window.location.href = url.toString();
+    // Refresh the server components without a full page reload.
+    // This preserves the client state (isMenuOpen) while updating the content.
+    router.refresh();
   };
 
   const logo = "/icon/logos/logo-grupo-extreme.svg";
@@ -113,12 +101,14 @@ export default function Header({ dict, lang }: { dict: any; lang: string }) {
             </button>
           </nav>
 
-          {/* Mobile Language Button (Only visible when menu is open) */}
+          {/* Mobile Language Button */}
           <button
             onClick={toggleLanguage}
-            className={`md:hidden px-3 py-1.5 rounded-full text-[10px] font-bold tracking-widest transition-all duration-500 flex items-center space-x-2 border-2 relative z-[70] ${isMenuOpen
-              ? "opacity-100 translate-x-0 border-white/30 text-white"
-              : "opacity-0 translate-x-4 pointer-events-none border-transparent"
+            className={`md:hidden px-3 py-1.5 rounded-full text-[10px] font-bold tracking-widest transition-all duration-500 flex items-center space-x-2 border-2 relative z-[70] ${isMenuOpen || (isDarkHeroPage && !isScrolled)
+              ? "border-white/30 text-white"
+              : isScrolled || !isDarkHeroPage
+                ? "border-dark/20 text-dark"
+                : "border-white/30 text-white"
               }`}
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

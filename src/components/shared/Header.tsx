@@ -42,9 +42,6 @@ export default function Header() {
               priority
             />
           </div>
-          {/* <span className={`text-2xl font-display font-extrabold tracking-tighter ${isScrolled ? "text-dark" : "text-white"}`}>
-            EXTREME<span className={isScrolled ? "text-primary" : "text-white"}></span>
-          </span> */}
         </Link>
 
         {/* Desktop Nav */}

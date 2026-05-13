@@ -31,7 +31,7 @@ const locations = [
   {
     id: 2,
     name: "Snorkeling Adventure",
-    coords: { lng: -86.874917, lat: 20.844111 },
+    coords: { lng: -86.8772, lat: 20.8441 },
     address: "Rafael E. Melgar, Puerto Morelos",
     googleMapsUrl: "https://maps.google.com/maps?q=Snorkel+Adventure+Cancun",
     icon: (
@@ -44,7 +44,7 @@ const locations = [
   {
     id: 3,
     name: "Beach Taco Tour",
-    coords: { lng: -86.874556, lat: 20.846833 },
+    coords: { lng: -86.8768, lat: 20.8468 },
     address: "Rafael E. Melgar, Puerto Morelos",
     googleMapsUrl: "https://maps.google.com/maps?q=Beach+Taco+Tour+Puerto+Morelos",
     icon: (
