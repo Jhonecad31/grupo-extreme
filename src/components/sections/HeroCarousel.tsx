@@ -3,7 +3,18 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function HeroCarousel({ dict }: { dict: any }) {
+interface Slide {
+  image: string;
+  title: string;
+  subtitle: string;
+}
+
+interface HeroDictionary {
+  slides: Slide[];
+  explore: string;
+}
+
+export default function HeroCarousel({ dict }: { dict: HeroDictionary }) {
 
   const [current, setCurrent] = useState(0);
 
@@ -16,7 +27,7 @@ export default function HeroCarousel({ dict }: { dict: any }) {
 
   return (
     <section className="relative h-screen w-full overflow-hidden bg-dark">
-      {dict.slides.map((slide, index) => (
+      {dict.slides.map((slide: Slide, index: number) => (
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === current ? "opacity-100 scale-105" : "opacity-0 scale-100"
@@ -54,7 +65,7 @@ export default function HeroCarousel({ dict }: { dict: any }) {
 
       {/* Progress indicators */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex space-x-3">
-        {dict.slides.map((_, i) => (
+        {Array.from({ length: dict.slides.length }).map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}

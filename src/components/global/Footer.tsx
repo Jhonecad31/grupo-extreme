@@ -64,7 +64,7 @@ export default function Footer({ dict, lang = "es" }: { dict: any; lang?: string
           <div className="md:col-span-2">
             <h4 className="text-sm font-bold uppercase tracking-widest mb-8">{dict.footer.legal_title}</h4>
             <ul className="space-y-4">
-              {dict.footer.legal_links.map((item) => (
+              {dict.footer.legal_links.map((item: string) => (
                 <li key={item}>
                   <Link href="#" className="text-white/50 hover:text-white transition-colors">
                     {item}
