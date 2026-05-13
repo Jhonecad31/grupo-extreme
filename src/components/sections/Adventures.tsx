@@ -16,7 +16,7 @@ const tours = [
   },
   {
     id: 2,
-    name: "Snorkeling Adventuring",
+    name: "Snorkeling Adventure",
     image: "/GrupoExtreme-web/snorkel-fondo-2.webp",
     status: null,
     logo: "/icon/logos/logo-snorkel.svg",
