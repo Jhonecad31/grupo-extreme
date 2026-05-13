@@ -32,7 +32,7 @@ export default async function ContactContent({ params }: { params: Promise<{ lan
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
               {dict.contact.subtitle}
             </span>
-            <h1 className="text-5xl md:text-7xl text-dark font-display font-black leading-none mb-10">
+            <h1 className="text-4xl md:text-6xl text-dark font-display font-black leading-none mb-10 uppercase">
               {dict.contact.title}
             </h1>
             <p className="text-gray-500 text-lg leading-relaxed mb-16 max-w-lg">

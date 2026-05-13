@@ -23,7 +23,7 @@ export default async function Home(props: {
                             <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-6 block">
                                 {dict.home.history.subtitle}
                             </span>
-                            <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight mb-8">
+                            <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight mb-8 uppercase">
                                 {dict.home.history.title}
                             </h2>
                             <div className="space-y-6 text-dark/70 text-lg leading-relaxed">

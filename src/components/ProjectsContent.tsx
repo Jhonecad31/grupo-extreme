@@ -19,7 +19,7 @@ export default async function ProyectosPage(props: {
                         <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block animate-fade-in">
                             {dict.projects.subtitle}
                         </span>
-                        <h1 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up mb-6">
+                        <h1 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight animate-slide-up mb-6 uppercase">
                             {dict.projects.title}
                         </h1>
                         <p className="text-gray-600 text-lg leading-relaxed">

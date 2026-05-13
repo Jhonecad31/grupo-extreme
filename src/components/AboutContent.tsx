@@ -42,7 +42,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
                 {dict.about.editorial.subtitle}
               </span>
 
-              <h2 className="text-4xl md:text-7xl font-display font-black text-white leading-[0.9] mb-8 md:mb-10">
+              <h2 className="text-4xl md:text-6xl font-display font-black text-white leading-[0.9] mb-8 md:mb-10 uppercase">
                 {dict.about.editorial.title}
               </h2>
 
@@ -160,7 +160,7 @@ export default function AboutContent({ lang, dict }: { lang: string; dict: any }
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-7xl text-dark font-display font-black leading-tight uppercase"
+              className="text-4xl md:text-6xl text-dark font-display font-black leading-tight uppercase"
             >
               {dict.about.philosophy.title}
             </motion.h2>

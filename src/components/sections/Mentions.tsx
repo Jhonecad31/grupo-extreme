@@ -10,7 +10,7 @@ export default function Mentions({ dict }: { dict: any }) {
           <span className="text-primary font-bold tracking-[0.3em] uppercase text-sm mb-4 block">
             {dict.subtitle}
           </span>
-          <h2 className="text-4xl md:text-5xl text-dark font-display font-black leading-tight">
+          <h2 className="text-4xl md:text-6xl text-dark font-display font-black leading-tight uppercase">
             {dict.title}
           </h2>
         </div>
