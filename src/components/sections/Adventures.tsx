@@ -34,14 +34,7 @@ const tours = [
     image: "/GrupoExtreme-web/taco-fondo.webp",
     status: null,
     logo: "/icon/logos/logo-taco.svg",
-  },
-  {
-    id: 5,
-    name: "Horse Ride",
-    image: "/GrupoExtreme-web/horse-fondo.webp",
-    status: null,
-    logo: "/icon/logos/logo-horse.svg",
-  },
+  }
 ];
 
 export default function Adventures({ dict }: { dict: any }) {

@@ -295,16 +295,6 @@
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
     {
-      "id": "horse_ride",
-      "name": "Horse Ride",
-      "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",
-      "features": ["Caballos Entrenados y Dóciles", "Ruta Especializada en la Selva", "Apto para Principiantes", "Duración de 2 Horas Inmersivas"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
-      "logo": "/icon/logos/logo-horse.svg",
-      "group": "unique",
-      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
-    },
-    {
       "id": "mystic-waters",
       "name": "Mystic Waters",
       "description": "Cabalga a través de densos senderos selváticos de rica vegetación y asombrosos paisajes en esta pacífica y memorable aventura ecuestre.",

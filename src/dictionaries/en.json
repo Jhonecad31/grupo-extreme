@@ -295,16 +295,6 @@
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
     {
-      "id": "horse_ride",
-      "name": "Horse Ride",
-      "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
-      "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2-Hour Immersive Duration"],
-      "image": "/GrupoExtreme-web/horse-fondo.webp",
-      "logo": "/icon/logos/logo-horse.svg",
-      "group": "unique",
-      "url": "https://extremeadventurecancun.com/extreme-adventuring-horse-back-riding/"
-    },
-    {
       "id": "mystic_waters",
       "name": "Mystic Waters",
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",

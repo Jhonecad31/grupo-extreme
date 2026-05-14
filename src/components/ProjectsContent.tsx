@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { projectsData } from "@/data/projects";
 import Image from "next/image";
 import UpcomingBrands from "@/components/UpcomingBrands";
 
