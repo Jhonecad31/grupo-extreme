@@ -77,7 +77,9 @@
       ],
       "app_badge": "Official Partner App",
       "app_title": "Manage your sales in real time",
-      "app_desc": "Our exclusive platform allows partners to generate payments, manage bookings and monitor their earnings from any device."
+      "app_desc": "Our exclusive platform allows partners to generate payments, manage bookings and monitor their earnings from any device.",
+      "app_store_url": "https://apps.apple.com/mx/app/extreme-partners/id6755342800",
+      "google_play_url": "https://play.google.com/store/apps/details?id=pro.wellet.extremeadventuring&hl=es_MX"
     },
     "projects_section": {
       "subtitle": "Our Projects",
