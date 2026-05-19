@@ -267,7 +267,7 @@
       "description": "An unforgettable experience of pure adrenaline in the Mayan jungle with zip-lines, professional ATV circuits, and exploration of hidden cenotes in virgin nature.",
       "features": ["Extreme Zip-lines", "4x4 ATV Circuit", "Virgin Cenotes", "Regional Food", "Professional Safety Equipment"],
       "image": "/GrupoExtreme-web/extreme-fondo.webp",
-      "logo": "/icon/logos/logo-extreme.svg",
+      "logo": "/icon/logos/logos-all-01.svg",
       "group": "unique",
       "url": "https://extremeadventurecancun.com/extreme-adventuring-atv-in-cancun/"
     },
@@ -277,7 +277,7 @@
       "description": "Explore the majestic coral reef. Dive and swim alongside sea turtles, stingrays, and hundreds of tropical fish in their natural habitat.",
       "features": ["Full Snorkel Equipment", "Bilingual Certified Guide", "Fast Boat Transport", "Visit to 2 Protected Reefs"],
       "image": "/GrupoExtreme-web/snorkel-fondo-2.webp",
-      "logo": "/icon/logos/logo-snorkel.svg",
+      "logo": "/icon/logos/logos-all-02.svg",
       "group": "unique",
       "url": "https://snorkelingadventure.com/snorkel-adventuring-details/"
     },
@@ -287,7 +287,7 @@
       "description": "Dive into the crystal-clear and healing waters of our exclusive cenotes. A mystical, refreshing adventure connected with Mayan culture.",
       "features": ["Safe Free Swimming", "Life Jacket", "Private Rest Areas", "Open and Underground Cenotes"],
       "image": "/GrupoExtreme-web/cenote-fondo.webp",
-      "logo": "/icon/logos/logo-cenote.svg",
+      "logo": "/icon/logos/logos-all-03.svg",
       "group": "unique",
       "url": "https://extremeadventurecancun.com/cenotes-cancun/"
     },
@@ -297,7 +297,7 @@
       "description": "An exceptional gastronomic and cultural tour. Taste the best local tacos with fresh ingredients while enjoying panoramic views of the Caribbean Sea.",
       "features": ["Gourmet Taco Tasting", "Drinks and Mixology Included", "Sunset on the Beach", "Expert Local Culinary Guide"],
       "image": "/GrupoExtreme-web/taco-fondo.webp",
-      "logo": "/icon/logos/logo-taco.svg",
+      "logo": "/icon/logos/logos-all-07.svg",
       "group": "unique",
       "url": "https://extremeadventurecancun.com/city-taco-tour-puerto-morelos/"
     },
@@ -307,7 +307,7 @@
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/MistycW.webp",
-      "logo": "/icon/logos/logo-mystic-waters.svg",
+      "logo": "/icon/logos/logos-all-05.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
     },
@@ -317,7 +317,7 @@
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/BeefD.webp",
-      "logo": "/icon/logos/logo-beef-and-drive.svg",
+      "logo": "/icon/logos/logos-all-04.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
     },
@@ -327,7 +327,7 @@
       "description": "Ride through dense jungle trails of rich vegetation and amazing landscapes in this peaceful and memorable equestrian adventure.",
       "features": ["Trained and Gentle Horses", "Specialized Jungle Route", "Suitable for Beginners", "2 Immersive Hours Duration"],
       "image": "/GrupoExtreme-web/5Elements.webp",
-      "logo": "/icon/logos/logo-five-elements.svg",
+      "logo": "/icon/logos/logos-all-05.svg",
       "group": "full",
       "url": "https://extremeadventurecancun.com/"
     }
